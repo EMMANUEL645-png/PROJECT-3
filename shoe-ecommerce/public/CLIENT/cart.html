@@ -53,7 +53,7 @@
             <circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
-          <span class="cart-count" id="cart-count">4</span>
+          <span class="cart-count" id="cart-count">0</span>
         </a>
         <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -76,7 +76,7 @@
           <span aria-current="page">Shopping Cart</span>
         </nav>
         <h1 class="page-title-band__title">Shopping Cart</h1>
-        <p class="page-title-band__desc">Manage your bag items and verify sizes before proceeding to delivery checkout.</p>
+        <p class="page-title-band__desc">Manage your bag items before proceeding to delivery checkout.</p>
       </div>
     </div>
 
@@ -89,98 +89,11 @@
           <div class="cart-items-container">
             <!-- Active Items Wrapper -->
             <!-- JS HOOK: Cart page content -->
-            <div id="cart-content" class="cart-items-list">
-              
-              <!-- Item 1: P06 Air Jordan 4 Infrared, size 43, qty 1 -->
-              <article class="cart-item" data-product-id="p06" data-price="170000" data-size="43">
-                <div class="cart-item__thumb tile-gray-dark">
-                  <img src="IMAGES/shoes/jordan-4-infrared.jpg" alt="Air Jordan 4 Infrared" width="120" height="120">
-                </div>
-                <div class="cart-item__details">
-                  <h3 class="cart-item__name">Air Jordan 4 Infrared</h3>
-                  <div class="cart-item__meta">Size: EU 43 | Colour: Infrared</div>
-                  <div class="cart-item__unit-price">Unit: ₦170,000</div>
-                </div>
-                <div class="cart-item__controls">
-                  <!-- Stepper -->
-                  <div class="cart-item__stepper">
-                    <button type="button" class="qty-btn js-qty-minus" aria-label="Decrease quantity">&minus;</button>
-                    <input type="number" class="qty-input" value="1" min="1" max="10" readonly aria-label="Quantity">
-                    <button type="button" class="qty-btn js-qty-plus" aria-label="Increase quantity">&plus;</button>
-                  </div>
-                  <div class="cart-item__line-total">₦170,000</div>
-                  <button type="button" class="btn-remove js-remove-item" aria-label="Remove Air Jordan 4 Infrared from cart">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="3 6 5 6 21 6"></polyline>
-                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                      <line x1="10" y1="11" x2="10" y2="17"></line>
-                      <line x1="14" y1="11" x2="14" y2="17"></line>
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
-              <!-- Item 2: P11 Nike Dunk Low Navy Mocha, size 42, qty 1 -->
-              <article class="cart-item" data-product-id="p11" data-price="75000" data-size="42">
-                <div class="cart-item__thumb tile-pink">
-                  <img src="IMAGES/shoes/nike-dunk-low-navy-mocha.jpg" alt="Nike Dunk Low Navy Mocha" width="120" height="120">
-                </div>
-                <div class="cart-item__details">
-                  <h3 class="cart-item__name">Nike Dunk Low Navy Mocha</h3>
-                  <div class="cart-item__meta">Size: EU 42 | Colour: Navy / Mocha</div>
-                  <div class="cart-item__unit-price">Unit: ₦75,000</div>
-                </div>
-                <div class="cart-item__controls">
-                  <div class="cart-item__stepper">
-                    <button type="button" class="qty-btn js-qty-minus" aria-label="Decrease quantity">&minus;</button>
-                    <input type="number" class="qty-input" value="1" min="1" max="10" readonly aria-label="Quantity">
-                    <button type="button" class="qty-btn js-qty-plus" aria-label="Increase quantity">&plus;</button>
-                  </div>
-                  <div class="cart-item__line-total">₦75,000</div>
-                  <button type="button" class="btn-remove js-remove-item" aria-label="Remove Nike Dunk Low from cart">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="3 6 5 6 21 6"></polyline>
-                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                      <line x1="10" y1="11" x2="10" y2="17"></line>
-                      <line x1="14" y1="11" x2="14" y2="17"></line>
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
-              <!-- Item 3: P18 Adidas Samba LT Green, size 41, qty 2 -->
-              <article class="cart-item" data-product-id="p18" data-price="90000" data-size="41">
-                <div class="cart-item__thumb tile-gray-mid">
-                  <img src="IMAGES/shoes/adidas-samba-lt-green.jpg" alt="Adidas Samba LT Green" width="120" height="120">
-                </div>
-                <div class="cart-item__details">
-                  <h3 class="cart-item__name">Adidas Samba LT Green</h3>
-                  <div class="cart-item__meta">Size: EU 41 | Colour: Sage / White</div>
-                  <div class="cart-item__unit-price">Unit: ₦90,000</div>
-                </div>
-                <div class="cart-item__controls">
-                  <div class="cart-item__stepper">
-                    <button type="button" class="qty-btn js-qty-minus" aria-label="Decrease quantity">&minus;</button>
-                    <input type="number" class="qty-input" value="2" min="1" max="10" readonly aria-label="Quantity">
-                    <button type="button" class="qty-btn js-qty-plus" aria-label="Increase quantity">&plus;</button>
-                  </div>
-                  <div class="cart-item__line-total">₦180,000</div>
-                  <button type="button" class="btn-remove js-remove-item" aria-label="Remove Adidas Samba LT from cart">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="3 6 5 6 21 6"></polyline>
-                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                      <line x1="10" y1="11" x2="10" y2="17"></line>
-                      <line x1="14" y1="11" x2="14" y2="17"></line>
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
-            </div>
+            <div id="cart-content" class="cart-items-list"></div>
 
             <!-- Empty Cart State (Hidden by default) -->
             <!-- JS HOOK: Empty cart state -->
-            <div id="cart-empty" class="cart-empty-state" hidden>
+            <div id="cart-empty" class="cart-empty-state">
               <div class="cart-empty-icon" aria-hidden="true">
                 <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="9" cy="21" r="1"></circle>
@@ -202,16 +115,16 @@
               <!-- Totals Rows -->
               <div class="summary-rows">
                 <div class="summary-row">
-                  <span>Subtotal (4 items)</span>
-                  <span id="cart-subtotal">₦425,000</span>
+                  <span>Subtotal (0 items)</span>
+                  <span id="cart-subtotal">₦0</span>
                 </div>
                 <div class="summary-row">
                   <span>Estimated Delivery</span>
-                  <span id="cart-delivery">Free</span>
+                  <span id="cart-delivery">—</span>
                 </div>
                 <div class="summary-row summary-row--total">
                   <span>Total</span>
-                  <span id="cart-total">₦425,000</span>
+                  <span id="cart-total">₦0</span>
                 </div>
               </div>
 
@@ -223,7 +136,7 @@
 
               <!-- Actions -->
               <div class="summary-actions">
-                <a href="checkout.html" class="btn btn--primary" style="width: 100%;">Proceed to Checkout</a>
+                <a href="checkout.html" class="btn btn--primary is-disabled" aria-disabled="true" style="width: 100%;">Proceed to Checkout</a>
                 <a href="shop.html" class="btn btn--outline" style="width: 100%;">Continue Shopping</a>
               </div>
 
@@ -312,6 +225,6 @@
     </div>
   </footer>
 
-  <!-- JS: link my script here later, e.g. <script src="JS/script.js" defer></script> -->
+  <script type="module" src="JS/cart.js"></script>
 </body>
 </html>

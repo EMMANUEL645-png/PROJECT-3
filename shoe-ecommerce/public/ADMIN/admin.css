@@ -14,6 +14,26 @@
   min-height: 100vh;
 }
 
+/* Guard & App Wrapper */
+.admin-guard {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+#admin-app[hidden],
+[hidden] {
+  display: none !important;
+}
+
 /* --------------------------------------------------------------------------
    Admin Sidebar (Dark)
    -------------------------------------------------------------------------- */
@@ -132,6 +152,13 @@
   gap: 1.25rem;
 }
 
+.admin-user-name {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
 .admin-user-avatar {
   width: 40px;
   height: 40px;
@@ -222,6 +249,8 @@
   margin-bottom: 1.5rem;
   padding-bottom: 0.875rem;
   border-bottom: 1px solid var(--color-border);
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .admin-section__title {
@@ -230,7 +259,129 @@
   color: var(--color-text);
 }
 
-/* Tables */
+#form-mode-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  color: var(--color-primary);
+  font-weight: 600;
+  background-color: rgba(240, 135, 74, 0.12);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Form Grids */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.admin-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-image-preview {
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  margin-top: 0.75rem;
+  display: block;
+  object-fit: cover;
+}
+
+.admin-image-preview[hidden] {
+  display: none !important;
+}
+
+/* Admin Form Status Messages */
+.admin-message {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.admin-message[hidden] {
+  display: none !important;
+}
+
+.admin-message--error {
+  background-color: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #FFCDD2;
+}
+
+.admin-message--success {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #C8E6C9;
+}
+
+/* --------------------------------------------------------------------------
+   Admin Toolbars (Search, Filters, Count)
+   -------------------------------------------------------------------------- */
+.admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-toolbar__search {
+  flex: 1 1 240px;
+  max-width: 320px;
+}
+
+.admin-toolbar__input,
+.admin-toolbar__select {
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-toolbar__input {
+  width: 100%;
+}
+
+.admin-toolbar__input:focus,
+.admin-toolbar__select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(240, 135, 74, 0.16);
+}
+
+.admin-toolbar__filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.admin-toolbar__count {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
 .admin-table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -264,6 +415,14 @@
   background-color: rgba(0, 0, 0, 0.015);
 }
 
+.admin-empty {
+  text-align: center;
+  padding: 3rem 1.5rem !important;
+  color: var(--color-text-muted);
+  font-size: var(--fs-body);
+  font-style: italic;
+}
+
 .admin-prod-thumb {
   width: 48px;
   height: 48px;
@@ -294,6 +453,30 @@
 .admin-badge--info {
   background-color: #E3F2FD;
   color: #1565C0;
+}
+
+.admin-badge--danger {
+  background-color: #FFEBEE;
+  color: #D32F2F;
+}
+
+/* Order Status Select in Table */
+.admin-status-select {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-tiny);
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  cursor: pointer;
+  outline: none;
+  font-family: var(--font-body);
+  transition: border-color 0.2s ease;
+}
+
+.admin-status-select:focus {
+  border-color: var(--color-primary);
 }
 
 .admin-table-actions {
@@ -332,7 +515,104 @@
 }
 
 /* --------------------------------------------------------------------------
-   Admin Responsiveness (< 992px)
+   Delete Confirmation Modal
+   -------------------------------------------------------------------------- */
+.admin-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 9999;
+}
+
+.admin-modal[hidden] {
+  display: none !important;
+}
+
+.admin-modal__card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.admin-modal__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.admin-modal__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
+}
+
+#confirm-product-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.admin-modal__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn--danger {
+  background-color: #D32F2F;
+  color: var(--color-white);
+  border: 1px solid #D32F2F;
+  border-radius: var(--radius-pill);
+  padding: 0.625rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn--danger:hover {
+  background-color: #B71C1C;
+  border-color: #B71C1C;
+}
+
+/* --------------------------------------------------------------------------
+   Toast Notification
+   -------------------------------------------------------------------------- */
+.admin-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  z-index: 10000;
+  transform: translateY(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.admin-toast[hidden] {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Admin Responsiveness (< 992px, < 768px, < 576px)
    -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
   .admin-layout {
@@ -377,6 +657,36 @@
   }
 }
 
+@media (max-width: 768px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-toolbar__search {
+    max-width: none;
+    width: 100%;
+  }
+
+  .admin-toolbar__filters {
+    width: 100%;
+  }
+
+  .admin-toolbar__select {
+    flex: 1 1 calc(50% - 0.375rem);
+    min-width: 0;
+  }
+
+  .admin-modal__card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
 @media (max-width: 575px) {
   .admin-stats-grid {
     grid-template-columns: 1fr;
@@ -386,5 +696,19 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .admin-topbar__user {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .admin-toolbar__filters {
+    flex-direction: column;
+  }
+
+  .admin-toolbar__select {
+    width: 100%;
   }
 }

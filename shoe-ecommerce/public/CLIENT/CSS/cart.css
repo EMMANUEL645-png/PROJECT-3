@@ -240,6 +240,12 @@
   margin-bottom: 1.25rem;
 }
 
+.is-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .summary-badge-note {
   font-family: var(--font-body);
   font-size: var(--fs-tiny);
@@ -598,3 +604,72 @@
   font-size: var(--fs-small);
   color: var(--color-text-muted);
 }
+
+/* --------------------------------------------------------------------------
+   Google Auth Button & Status Message
+   -------------------------------------------------------------------------- */
+.btn--google {
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: var(--radius-pill);
+  height: 48px;
+  min-height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-small);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.btn--google:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn--google svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Auth Status Message */
+.auth-message {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.auth-message[hidden] {
+  display: none !important;
+}
+
+.auth-message--error {
+  background-color: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #FFCDD2;
+}
+
+.auth-message--success {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #C8E6C9;
+}
+
+@media (max-width: 768px) {
+  .btn--google {
+    min-height: 44px;
+  }
+}
+

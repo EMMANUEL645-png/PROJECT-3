@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StrideStyle | Shop All Sneakers</title>
-  <meta name="description" content="Shop all 26 exclusive sneakers, Air Jordans, Nike Shox, and classics with authentic design and instant delivery in Nigeria.">
+  <meta name="description" content="Explore our curated catalog of authentic streetwear, high-top and running silhouettes.">
   
   <!-- Google Fonts: Prata, Lora, Poppins, Noto Sans fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +76,7 @@
           <span aria-current="page">Shop</span>
         </nav>
         <h1 class="page-title-band__title">Shop All Sneakers</h1>
-        <p class="page-title-band__desc">Explore our complete curated catalog of 26 authentic streetwear, high-top and running silhouettes.</p>
+        <p class="page-title-band__desc">Explore our curated catalog of authentic streetwear, high-top and running silhouettes.</p>
       </div>
     </div>
 
@@ -94,7 +94,7 @@
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
             </span>
-            <input type="search" id="shop-search" class="shop-toolbar__search-input" placeholder="Search by name, model or colour..." aria-label="Search shoes">
+            <input type="search" id="shop-search" class="shop-toolbar__search-input" placeholder="Search by name or model..." aria-label="Search shoes">
           </div>
 
           <!-- Category filter chips -->
@@ -108,6 +108,12 @@
 
           <!-- Meta (Sort + Count) -->
           <div class="shop-toolbar__meta">
+            <select id="price-filter" class="shop-toolbar__sort-select" aria-label="Filter by price">
+              <option value="all">All prices</option>
+              <option value="under-100">Under ₦100,000</option>
+              <option value="100-150">₦100,000 - ₦150,000</option>
+              <option value="over-150">Over ₦150,000</option>
+            </select>
             <select id="sort-select" class="shop-toolbar__sort-select" aria-label="Sort products">
               <option value="featured">Featured</option>
               <option value="price-asc">Price: Low to High</option>
@@ -120,15 +126,21 @@
 
         <!-- Product Grid: 26 Shoes -->
         <!-- JS HOOK: Shop page product grid -->
-        <div id="product-grid" class="shop-grid">
+        <div id="product-grid" class="shop-grid" data-batch="12" data-total="26">
 
           <!-- P01: Air Jordan 4 Orange Crackle -->
           <article class="product-card" data-product-id="p01" data-name="Air Jordan 4 Orange Crackle" data-price="185000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-orange-crackle.jpg">
             <div class="product-card__media tile-peach">
+              <span class="card-badge card-badge--new">New</span>
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Orange Crackle to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-orange-crackle.jpg" alt="Air Jordan 4 Orange Crackle" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Orange Crackle</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p01">Air Jordan 4 Orange Crackle</a></h3>
               <span class="product-card__price">₦185,000</span>
             </div>
             <div class="product-card__action">
@@ -139,10 +151,15 @@
           <!-- P02: Air Jordan 4 Royalty (Cutout) -->
           <article class="product-card" data-product-id="p02" data-name="Air Jordan 4 Royalty" data-price="175000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-royalty-black-gold.jpg">
             <div class="product-card__media tile-gray">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Royalty to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-royalty-black-gold.jpg" alt="Air Jordan 4 Royalty" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Royalty</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p02">Air Jordan 4 Royalty</a></h3>
               <span class="product-card__price">₦175,000</span>
             </div>
             <div class="product-card__action">
@@ -153,10 +170,15 @@
           <!-- P03: Air Jordan 4 Military Blue (Cutout) -->
           <article class="product-card" data-product-id="p03" data-name="Air Jordan 4 Military Blue" data-price="165000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-military-blue.jpg">
             <div class="product-card__media tile-sky">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Military Blue to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-military-blue.jpg" alt="Air Jordan 4 Military Blue" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Military Blue</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p03">Air Jordan 4 Military Blue</a></h3>
               <span class="product-card__price">₦165,000</span>
             </div>
             <div class="product-card__action">
@@ -167,10 +189,15 @@
           <!-- P04: Air Jordan 4 Neon (Cutout) -->
           <article class="product-card" data-product-id="p04" data-name="Air Jordan 4 Neon" data-price="150000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-neon-grey.jpg">
             <div class="product-card__media tile-beige">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Neon to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-neon-grey.jpg" alt="Air Jordan 4 Neon" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Neon</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p04">Air Jordan 4 Neon</a></h3>
               <span class="product-card__price">₦150,000</span>
             </div>
             <div class="product-card__action">
@@ -181,10 +208,15 @@
           <!-- P05: Air Jordan 4 Oxidized Green -->
           <article class="product-card" data-product-id="p05" data-name="Air Jordan 4 Oxidized Green" data-price="145000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-oxidized-green.jpg">
             <div class="product-card__media tile-mint">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Oxidized Green to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-oxidized-green.jpg" alt="Air Jordan 4 Oxidized Green" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Oxidized Green</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p05">Air Jordan 4 Oxidized Green</a></h3>
               <span class="product-card__price">₦145,000</span>
             </div>
             <div class="product-card__action">
@@ -195,10 +227,15 @@
           <!-- P06: Air Jordan 4 Infrared -->
           <article class="product-card" data-product-id="p06" data-name="Air Jordan 4 Infrared" data-price="170000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-infrared.jpg">
             <div class="product-card__media tile-gray-dark">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Infrared to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-infrared.jpg" alt="Air Jordan 4 Infrared" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Infrared</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p06">Air Jordan 4 Infrared</a></h3>
               <span class="product-card__price">₦170,000</span>
             </div>
             <div class="product-card__action">
@@ -209,10 +246,15 @@
           <!-- P07: Air Jordan 4 Grey Black -->
           <article class="product-card" data-product-id="p07" data-name="Air Jordan 4 Grey Black" data-price="130000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-grey-black.jpg">
             <div class="product-card__media tile-gray-mid">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Grey Black to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-grey-black.jpg" alt="Air Jordan 4 Grey Black" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Grey Black</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p07">Air Jordan 4 Grey Black</a></h3>
               <span class="product-card__price">₦130,000</span>
             </div>
             <div class="product-card__action">
@@ -223,10 +265,16 @@
           <!-- P08: Air Jordan 4 KAWS -->
           <article class="product-card" data-product-id="p08" data-name="Air Jordan 4 KAWS" data-price="195000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-kaws-grey.jpg">
             <div class="product-card__media tile-gray">
+              <span class="card-badge card-badge--low-stock">Low Stock</span>
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 KAWS to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-4-kaws-grey.jpg" alt="Air Jordan 4 KAWS" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 KAWS</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p08">Air Jordan 4 KAWS</a></h3>
               <span class="product-card__price">₦195,000</span>
             </div>
             <div class="product-card__action">
@@ -237,10 +285,15 @@
           <!-- P09: Air Jordan 7 Black Gold -->
           <article class="product-card" data-product-id="p09" data-name="Air Jordan 7 Black Gold" data-price="155000" data-category="jordan" data-image="IMAGES/shoes/jordan-7-black-gold.jpg">
             <div class="product-card__media tile-peach">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 7 Black Gold to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-7-black-gold.jpg" alt="Air Jordan 7 Black Gold" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 7 Black Gold</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p09">Air Jordan 7 Black Gold</a></h3>
               <span class="product-card__price">₦155,000</span>
             </div>
             <div class="product-card__action">
@@ -251,10 +304,16 @@
           <!-- P10: Air Jordan 1 High Dark Mocha -->
           <article class="product-card" data-product-id="p10" data-name="Air Jordan 1 High Dark Mocha" data-price="160000" data-category="jordan" data-image="IMAGES/shoes/jordan-1-high-dark-mocha.jpg">
             <div class="product-card__media tile-mint">
+              <span class="card-badge card-badge--best-seller">Best Seller</span>
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 1 High Dark Mocha to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/jordan-1-high-dark-mocha.jpg" alt="Air Jordan 1 High Dark Mocha" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 1 High Dark Mocha</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p10">Air Jordan 1 High Dark Mocha</a></h3>
               <span class="product-card__price">₦160,000</span>
             </div>
             <div class="product-card__action">
@@ -265,10 +324,15 @@
           <!-- P11: Nike Dunk Low Navy Mocha -->
           <article class="product-card" data-product-id="p11" data-name="Nike Dunk Low Navy Mocha" data-price="75000" data-category="nike" data-image="IMAGES/shoes/nike-dunk-low-navy-mocha.jpg">
             <div class="product-card__media tile-pink">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Dunk Low Navy Mocha to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/nike-dunk-low-navy-mocha.jpg" alt="Nike Dunk Low Navy Mocha" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Dunk Low Navy Mocha</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p11">Nike Dunk Low Navy Mocha</a></h3>
               <span class="product-card__price">₦75,000</span>
             </div>
             <div class="product-card__action">
@@ -279,10 +343,15 @@
           <!-- P12: Nike Shox R4 Black Silver -->
           <article class="product-card" data-product-id="p12" data-name="Nike Shox R4 Black Silver" data-price="135000" data-category="nike" data-image="IMAGES/shoes/nike-shox-r4-black-silver.jpg">
             <div class="product-card__media tile-blush">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Shox R4 Black Silver to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/nike-shox-r4-black-silver.jpg" alt="Nike Shox R4 Black Silver" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Shox R4 Black Silver</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p12">Nike Shox R4 Black Silver</a></h3>
               <span class="product-card__price">₦135,000</span>
             </div>
             <div class="product-card__action">
@@ -293,10 +362,16 @@
           <!-- P13: Nike Shox TL Volt -->
           <article class="product-card" data-product-id="p13" data-name="Nike Shox TL Volt" data-price="145000" data-category="nike" data-image="IMAGES/shoes/nike-shox-tl-volt-green.jpg">
             <div class="product-card__media tile-gray">
+              <span class="card-badge card-badge--new">New</span>
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Shox TL Volt to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/nike-shox-tl-volt-green.jpg" alt="Nike Shox TL Volt" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Shox TL Volt</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p13">Nike Shox TL Volt</a></h3>
               <span class="product-card__price">₦145,000</span>
             </div>
             <div class="product-card__action">
@@ -307,10 +382,15 @@
           <!-- P14: Nike Shox TL Bred -->
           <article class="product-card" data-product-id="p14" data-name="Nike Shox TL Bred" data-price="150000" data-category="nike" data-image="IMAGES/shoes/nike-shox-tl-black-red.jpg">
             <div class="product-card__media tile-tan">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Shox TL Bred to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/nike-shox-tl-black-red.jpg" alt="Nike Shox TL Bred" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Shox TL Bred</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p14">Nike Shox TL Bred</a></h3>
               <span class="product-card__price">₦150,000</span>
             </div>
             <div class="product-card__action">
@@ -321,10 +401,15 @@
           <!-- P15: Nike Shox TL Triple Black -->
           <article class="product-card" data-product-id="p15" data-name="Nike Shox TL Triple Black" data-price="148000" data-category="nike" data-image="IMAGES/shoes/nike-shox-tl-triple-black.jpg">
             <div class="product-card__media tile-beige">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Shox TL Triple Black to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/nike-shox-tl-triple-black.jpg" alt="Nike Shox TL Triple Black" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Shox TL Triple Black</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p15">Nike Shox TL Triple Black</a></h3>
               <span class="product-card__price">₦148,000</span>
             </div>
             <div class="product-card__action">
@@ -335,10 +420,16 @@
           <!-- P16: Nike Air Max 95 Greyscale -->
           <article class="product-card" data-product-id="p16" data-name="Nike Air Max 95 Greyscale" data-price="168000" data-category="nike" data-image="IMAGES/shoes/nike-air-max-95-grey-gradient.jpg">
             <div class="product-card__media tile-gray-dark">
+              <span class="card-badge card-badge--best-seller">Best Seller</span>
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Air Max 95 Greyscale to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/nike-air-max-95-grey-gradient.jpg" alt="Nike Air Max 95 Greyscale" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Air Max 95 Greyscale</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p16">Nike Air Max 95 Greyscale</a></h3>
               <span class="product-card__price">₦168,000</span>
             </div>
             <div class="product-card__action">
@@ -349,10 +440,15 @@
           <!-- P17: Nike Air Max Plus Gradient -->
           <article class="product-card" data-product-id="p17" data-name="Nike Air Max Plus Gradient" data-price="125000" data-category="nike" data-image="IMAGES/shoes/nike-air-max-plus-black-grey.jpg">
             <div class="product-card__media tile-pink">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Air Max Plus Gradient to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/nike-air-max-plus-black-grey.jpg" alt="Nike Air Max Plus Gradient" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Air Max Plus Gradient</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p17">Nike Air Max Plus Gradient</a></h3>
               <span class="product-card__price">₦125,000</span>
             </div>
             <div class="product-card__action">
@@ -363,10 +459,15 @@
           <!-- P18: Adidas Samba LT Green -->
           <article class="product-card" data-product-id="p18" data-name="Adidas Samba LT Green" data-price="90000" data-category="classics" data-image="IMAGES/shoes/adidas-samba-lt-green.jpg">
             <div class="product-card__media tile-gray-mid">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Adidas Samba LT Green to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/adidas-samba-lt-green.jpg" alt="Adidas Samba LT Green" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Adidas Samba LT Green</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p18">Adidas Samba LT Green</a></h3>
               <span class="product-card__price">₦90,000</span>
             </div>
             <div class="product-card__action">
@@ -377,10 +478,15 @@
           <!-- P19: New Balance 740 Black (Cutout) -->
           <article class="product-card" data-product-id="p19" data-name="New Balance 740 Black" data-price="110000" data-category="classics" data-image="IMAGES/shoes/new-balance-740-black.jpg">
             <div class="product-card__media tile-gray-dark">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add New Balance 740 Black to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/new-balance-740-black.jpg" alt="New Balance 740 Black" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">New Balance 740 Black</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p19">New Balance 740 Black</a></h3>
               <span class="product-card__price">₦110,000</span>
             </div>
             <div class="product-card__action">
@@ -391,10 +497,15 @@
           <!-- P20: Retro Training Yellow (Cutout) -->
           <article class="product-card" data-product-id="p20" data-name="Retro Training Yellow" data-price="95000" data-category="street" data-image="IMAGES/shoes/retro-training-yellow.jpg">
             <div class="product-card__media tile-cream">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Retro Training Yellow to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/retro-training-yellow.jpg" alt="Retro Training Yellow" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Retro Training Yellow</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p20">Retro Training Yellow</a></h3>
               <span class="product-card__price">₦95,000</span>
             </div>
             <div class="product-card__action">
@@ -405,10 +516,15 @@
           <!-- P21: Retro Star Denim (Cutout) -->
           <article class="product-card" data-product-id="p21" data-name="Retro Star Denim" data-price="100000" data-category="street" data-image="IMAGES/shoes/retro-star-denim.jpg">
             <div class="product-card__media tile-peach">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Retro Star Denim to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/retro-star-denim.jpg" alt="Retro Star Denim" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Retro Star Denim</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p21">Retro Star Denim</a></h3>
               <span class="product-card__price">₦100,000</span>
             </div>
             <div class="product-card__action">
@@ -419,10 +535,15 @@
           <!-- P22: Chunky Street Black Gold -->
           <article class="product-card" data-product-id="p22" data-name="Chunky Street Black Gold" data-price="70000" data-category="street" data-image="IMAGES/shoes/chunky-street-black-gold.jpg">
             <div class="product-card__media tile-gray">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Chunky Street Black Gold to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/chunky-street-black-gold.jpg" alt="Chunky Street Black Gold" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Chunky Street Black Gold</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p22">Chunky Street Black Gold</a></h3>
               <span class="product-card__price">₦70,000</span>
             </div>
             <div class="product-card__action">
@@ -433,10 +554,15 @@
           <!-- P23: Sport Fashion High-Top -->
           <article class="product-card" data-product-id="p23" data-name="Sport Fashion High-Top" data-price="55000" data-category="street" data-image="IMAGES/shoes/sport-fashion-high-top-black-white.jpg">
             <div class="product-card__media tile-beige">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Sport Fashion High-Top to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/sport-fashion-high-top-black-white.jpg" alt="Sport Fashion High-Top" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Sport Fashion High-Top</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p23">Sport Fashion High-Top</a></h3>
               <span class="product-card__price">₦55,000</span>
             </div>
             <div class="product-card__action">
@@ -447,10 +573,15 @@
           <!-- P24: Sport Fashion Runner White Red -->
           <article class="product-card" data-product-id="p24" data-name="Sport Fashion Runner White Red" data-price="60000" data-category="street" data-image="IMAGES/shoes/sport-fashion-runner-white-red.jpg">
             <div class="product-card__media tile-pink">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Sport Fashion Runner White Red to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/sport-fashion-runner-white-red.jpg" alt="Sport Fashion Runner White Red" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Sport Fashion Runner White Red</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p24">Sport Fashion Runner White Red</a></h3>
               <span class="product-card__price">₦60,000</span>
             </div>
             <div class="product-card__action">
@@ -461,10 +592,15 @@
           <!-- P25: Street Runner 23 White Blue -->
           <article class="product-card" data-product-id="p25" data-name="Street Runner 23 White Blue" data-price="65000" data-category="street" data-image="IMAGES/shoes/street-runner-23-white-blue.jpg">
             <div class="product-card__media tile-mint">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Street Runner 23 White Blue to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/street-runner-23-white-blue.jpg" alt="Street Runner 23 White Blue" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Street Runner 23 White Blue</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p25">Street Runner 23 White Blue</a></h3>
               <span class="product-card__price">₦65,000</span>
             </div>
             <div class="product-card__action">
@@ -475,10 +611,15 @@
           <!-- P26: Air Cushion Runner White Black -->
           <article class="product-card" data-product-id="p26" data-name="Air Cushion Runner White Black" data-price="80000" data-category="street" data-image="IMAGES/shoes/air-cushion-runner-white-black.jpg">
             <div class="product-card__media tile-blush">
+              <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Cushion Runner White Black to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
               <img src="IMAGES/shoes/air-cushion-runner-white-black.jpg" alt="Air Cushion Runner White Black" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Cushion Runner White Black</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p26">Air Cushion Runner White Black</a></h3>
               <span class="product-card__price">₦80,000</span>
             </div>
             <div class="product-card__action">
@@ -486,6 +627,20 @@
             </div>
           </article>
 
+        </div>
+
+        <!-- No Results / Empty State -->
+        <!-- JS HOOK: Empty search/filter state -->
+        <div id="shop-empty" class="shop-empty" hidden>
+          <div class="shop-empty__icon" aria-hidden="true">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <h2 class="shop-empty__title">No sneakers found</h2>
+          <p class="shop-empty__text">Try a different name or clear your filters.</p>
+          <button type="button" id="clear-filters" class="btn btn--primary">Clear Filters</button>
         </div>
 
         <!-- Load More Button -->
@@ -567,6 +722,6 @@
     </div>
   </footer>
 
-  <!-- JS: link my script here later, e.g. <script src="JS/script.js" defer></script> -->
+  <script type="module" src="JS/cart.js"></script>
 </body>
 </html>

@@ -133,6 +133,149 @@
   margin-bottom: 4rem;
 }
 
+/* --------------------------------------------------------------------------
+   Shop Grid Specific Product Card Styles (Badges & Wishlist)
+   Scoped to .shop-grid .product-card to preserve shared styles
+   -------------------------------------------------------------------------- */
+.shop-grid .product-card .product-card__media {
+  position: relative;
+}
+
+/* Pill Badges */
+.shop-grid .product-card .card-badge,
+.card-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-pill);
+  line-height: 1.2;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.shop-grid .product-card .card-badge--new,
+.shop-grid .product-card .card-badge--best-seller,
+.shop-grid .product-card .card-badge--bestseller,
+.card-badge--new,
+.card-badge--best-seller,
+.card-badge--bestseller {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.shop-grid .product-card .card-badge--low-stock,
+.shop-grid .product-card .card-badge--lowstock,
+.card-badge--low-stock,
+.card-badge--lowstock {
+  background-color: var(--color-bg-dark, #161616);
+  color: var(--color-white);
+}
+
+/* Circular Wishlist Button */
+.shop-grid .product-card .card-wishlist,
+.card-wishlist {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  z-index: 4;
+  padding: 0;
+  transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop-grid .product-card .card-wishlist:hover,
+.card-wishlist:hover {
+  color: #e53935;
+  transform: scale(1.08);
+}
+
+.shop-grid .product-card .card-wishlist svg,
+.card-wishlist svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  transition: stroke 0.2s ease, fill 0.2s ease;
+}
+
+.shop-grid .product-card .card-wishlist:hover svg,
+.card-wishlist:hover svg {
+  stroke: #e53935;
+  fill: #e53935;
+}
+
+.shop-grid .product-card .card-wishlist:focus-visible,
+.card-wishlist:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   No Results / Empty State
+   Styled like the cart empty state (white card, centred, soft shadow, generous padding)
+   -------------------------------------------------------------------------- */
+.shop-empty {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* Ensure [hidden] attribute strictly hides element */
+.shop-empty[hidden],
+[hidden] {
+  display: none !important;
+}
+
+.shop-empty__icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-empty__icon svg {
+  margin: 0 auto;
+}
+
+.shop-empty__title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.shop-empty__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Load More Button
+   -------------------------------------------------------------------------- */
 .shop-load-more {
   display: flex;
   justify-content: center;

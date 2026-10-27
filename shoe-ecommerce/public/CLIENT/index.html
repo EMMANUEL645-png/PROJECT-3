@@ -85,6 +85,7 @@
       <div class="container hero__container">
         <!-- Left Content -->
         <div class="hero__content">
+          <span class="hero__pill">New Drop</span>
           <h1 id="hero-heading" class="hero__title">
             Find The<br>Exclusive Shoe
           </h1>
@@ -107,6 +108,10 @@
         <div class="hero__media">
           <div class="hero__card">
             <img src="IMAGES/banners/hero-sneaker.jpg" alt="Orange crackle Air Jordan 4 sneaker" class="hero__img" width="480" height="480">
+            <div class="hero__card-caption">
+              <span class="hero__card-name">Air Jordan 4 Orange Crackle</span>
+              <span class="hero__card-price">₦185,000</span>
+            </div>
           </div>
         </div>
       </div>
@@ -154,12 +159,12 @@
               </div>
               <div class="collection-tall-card__info">
                 <div class="collection-tall-card__row-1">
-                  <h3 class="collection-tall-card__name">Nike Shox TL Bred</h3>
+                  <h3 class="collection-tall-card__name"><a href="product.html?id=p14">Nike Shox TL Bred</a></h3>
                   <span class="collection-tall-card__tag">Men's Shoe</span>
                 </div>
                 <div class="collection-tall-card__price">₦150,000</div>
                 <!-- JS HOOK: add-to-cart -->
-                <button type="button" class="btn btn--outline collection-tall-card__btn js-add-to-cart" data-product-id="p14">Buy Now</button>
+                <button type="button" class="btn btn--outline collection-tall-card__btn js-add-to-cart" data-product-id="p14">Add to Cart</button>
               </div>
             </article>
           </div>
@@ -218,7 +223,7 @@
     </section>
 
     <!-- ==========================================================================
-         D4. Pre Spring Collection (White Background)
+         D4. Fresh Drops Collection (White Background)
          ========================================================================== -->
     <section class="prespring-section" aria-labelledby="prespring-heading">
       <div class="container">
@@ -233,11 +238,11 @@
           <!-- Right Content + Wide Image -->
           <div class="prespring-col--right">
             <div class="prespring-content">
-              <h2 id="prespring-heading" class="section-head__title">Pre Spring<br>Collection</h2>
+              <h2 id="prespring-heading" class="section-head__title">Fresh Drops<br>Collection</h2>
               <p class="prespring-text">
-                Shoe Perks Members Get Free Shipping &amp; Exclusive Rewards! Shop StrideStyle For Amazing Deals On Sneakers, Jordans &amp; Street Classics.
+                Discover our latest fresh arrivals featuring 100% verified authentic pairs from top street brands. Enjoy fast, insured delivery to your doorstep anywhere across Nigeria.
               </p>
-              <a href="shop.html" class="btn btn--primary">Learn More</a>
+              <a href="shop.html" class="btn btn--primary">Shop the Collection</a>
             </div>
 
             <!-- Wide Bottom-Right Image -->
@@ -274,16 +279,17 @@
           </div>
         </div>
 
-        <div class="products-grid">
+        <div class="products-grid products-grid--slider" id="products-slider">
           <!-- Row 1: P02, P04, P19, P21 -->
           <!-- Card 1: P02 (tile gray, cutout) -->
           <!-- JS HOOK: Every product card -->
           <article class="product-card" data-product-id="p02" data-name="Air Jordan 4 Royalty" data-price="175000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-royalty-black-gold.jpg">
             <div class="product-card__media tile-gray">
+              <span class="product-badge">New</span>
               <img src="IMAGES/shoes/jordan-4-royalty-black-gold.jpg" alt="Air Jordan 4 Royalty" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Royalty</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p02">Air Jordan 4 Royalty</a></h3>
               <span class="product-card__price">₦175,000</span>
             </div>
             <div class="product-card__action">
@@ -297,7 +303,7 @@
               <img src="IMAGES/shoes/jordan-4-neon-grey.jpg" alt="Air Jordan 4 Neon" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 4 Neon</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p04">Air Jordan 4 Neon</a></h3>
               <span class="product-card__price">₦150,000</span>
             </div>
             <div class="product-card__action">
@@ -311,7 +317,7 @@
               <img src="IMAGES/shoes/new-balance-740-black.jpg" alt="New Balance 740 Black" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">New Balance 740 Black</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p19">New Balance 740 Black</a></h3>
               <span class="product-card__price">₦110,000</span>
             </div>
             <div class="product-card__action">
@@ -325,7 +331,7 @@
               <img src="IMAGES/shoes/retro-star-denim.jpg" alt="Retro Star Denim" class="product-card__img product-card__img--cutout" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Retro Star Denim</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p21">Retro Star Denim</a></h3>
               <span class="product-card__price">₦100,000</span>
             </div>
             <div class="product-card__action">
@@ -340,7 +346,7 @@
               <img src="IMAGES/shoes/adidas-samba-lt-green.jpg" alt="Adidas Samba LT Green" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Adidas Samba LT Green</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p18">Adidas Samba LT Green</a></h3>
               <span class="product-card__price">₦90,000</span>
             </div>
             <div class="product-card__action">
@@ -354,7 +360,7 @@
               <img src="IMAGES/shoes/nike-dunk-low-navy-mocha.jpg" alt="Nike Dunk Low Navy Mocha" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Dunk Low Navy Mocha</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p11">Nike Dunk Low Navy Mocha</a></h3>
               <span class="product-card__price">₦75,000</span>
             </div>
             <div class="product-card__action">
@@ -365,10 +371,11 @@
           <!-- Card 7: P10 (tile mint, photo) -->
           <article class="product-card" data-product-id="p10" data-name="Air Jordan 1 High Dark Mocha" data-price="160000" data-category="jordan" data-image="IMAGES/shoes/jordan-1-high-dark-mocha.jpg">
             <div class="product-card__media tile-mint">
+              <span class="product-badge">Best Seller</span>
               <img src="IMAGES/shoes/jordan-1-high-dark-mocha.jpg" alt="Air Jordan 1 High Dark Mocha" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Air Jordan 1 High Dark Mocha</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p10">Air Jordan 1 High Dark Mocha</a></h3>
               <span class="product-card__price">₦160,000</span>
             </div>
             <div class="product-card__action">
@@ -379,16 +386,56 @@
           <!-- Card 8: P12 (tile blush, photo) -->
           <article class="product-card" data-product-id="p12" data-name="Nike Shox R4 Black Silver" data-price="135000" data-category="nike" data-image="IMAGES/shoes/nike-shox-r4-black-silver.jpg">
             <div class="product-card__media tile-blush">
+              <span class="product-badge">Hot</span>
               <img src="IMAGES/shoes/nike-shox-r4-black-silver.jpg" alt="Nike Shox R4 Black Silver" class="product-card__img" width="300" height="360" loading="lazy">
             </div>
             <div class="product-card__caption">
-              <h3 class="product-card__name"><a href="product.html">Nike Shox R4 Black Silver</a></h3>
+              <h3 class="product-card__name"><a href="product.html?id=p12">Nike Shox R4 Black Silver</a></h3>
               <span class="product-card__price">₦135,000</span>
             </div>
             <div class="product-card__action">
               <button type="button" class="btn btn--outline js-add-to-cart" data-product-id="p12">Add to Cart</button>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Trust Strip (4 Pillars)
+         ========================================================================== -->
+    <section class="trust-strip" aria-label="Why Shop With Us">
+      <div class="container trust-strip__container">
+        <div class="trust-strip__item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-strip__icon" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+          <span class="trust-strip__text">100% Authentic</span>
+        </div>
+        <div class="trust-strip__item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-strip__icon" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <span class="trust-strip__text">Delivery across Nigeria</span>
+        </div>
+        <div class="trust-strip__item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-strip__icon" aria-hidden="true">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <polyline points="23 20 23 14 17 14"></polyline>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+          </svg>
+          <span class="trust-strip__text">14-day returns</span>
+        </div>
+        <div class="trust-strip__item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-strip__icon" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span class="trust-strip__text">Secure payment</span>
         </div>
       </div>
     </section>
@@ -418,9 +465,9 @@
               </a>
             </div>
             <!-- Group 2 -->
-            <div class="promo-marquee__item">
+            <div class="promo-marquee__item" aria-hidden="true">
               <span class="promo-marquee__text">Exclusive Shoe</span>
-              <a href="shop.html" class="btn btn--ghost">
+              <a href="shop.html" class="btn btn--ghost" tabindex="-1">
                 Shop Now
                 <span class="btn--ghost-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -431,9 +478,9 @@
               </a>
             </div>
             <!-- Group 3 -->
-            <div class="promo-marquee__item">
+            <div class="promo-marquee__item" aria-hidden="true">
               <span class="promo-marquee__text">Exclusive Shoe</span>
-              <a href="shop.html" class="btn btn--ghost">
+              <a href="shop.html" class="btn btn--ghost" tabindex="-1">
                 Shop Now
                 <span class="btn--ghost-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -444,9 +491,9 @@
               </a>
             </div>
             <!-- Group 4 -->
-            <div class="promo-marquee__item">
+            <div class="promo-marquee__item" aria-hidden="true">
               <span class="promo-marquee__text">Exclusive Shoe</span>
-              <a href="shop.html" class="btn btn--ghost">
+              <a href="shop.html" class="btn btn--ghost" tabindex="-1">
                 Shop Now
                 <span class="btn--ghost-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -457,9 +504,9 @@
               </a>
             </div>
             <!-- Group 5 -->
-            <div class="promo-marquee__item">
+            <div class="promo-marquee__item" aria-hidden="true">
               <span class="promo-marquee__text">Exclusive Shoe</span>
-              <a href="shop.html" class="btn btn--ghost">
+              <a href="shop.html" class="btn btn--ghost" tabindex="-1">
                 Shop Now
                 <span class="btn--ghost-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -557,6 +604,19 @@
     </div>
   </footer>
 
-  <!-- JS: link my script here later, e.g. <script src="JS/script.js" defer></script> -->
+  <!-- Video Modal (Hidden by default) -->
+  <div id="video-modal" class="video-modal" hidden>
+    <div class="video-modal__dialog">
+      <button type="button" id="video-modal-close" class="video-modal__close" aria-label="Close video">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="video-modal-body" class="video-modal__body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="JS/cart.js"></script>
 </body>
 </html>
