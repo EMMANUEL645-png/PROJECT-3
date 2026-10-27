@@ -1,7 +1,7 @@
 import { getProductById } from './products.js';
 
-const DELIVERY_FEE = 5000;
-const FREE_DELIVERY_ABOVE = 150000;
+export const DELIVERY_FEE = 5000;
+export const FREE_DELIVERY_ABOVE = 150000;
 
 // load the saved cart, or start with an empty one
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -11,7 +11,16 @@ function saveCart() {
   updateBadge();
 }
 
-function formatNaira(amount) {
+export function getCart() {
+  return cart;
+}
+
+export function clearCart() {
+  cart = [];
+  saveCart();
+}
+
+export function formatNaira(amount) {
   return '₦' + amount.toLocaleString('en-NG');
 }
 
@@ -98,12 +107,47 @@ function displayCart() {
   document.getElementById('cart-delivery').textContent =
     cart.length === 0 ? '—' : (delivery === 0 ? 'Free' : formatNaira(delivery));
   document.getElementById('cart-total').textContent = formatNaira(subtotal + delivery);
+
+  // item count in the summary label
+  let totalItems = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalItems += cart[i].qty;
+  }
+  const countEl = document.getElementById('cart-item-count');
+  if (countEl) countEl.textContent = totalItems;
+
+  // turn the checkout button on or off
+  const checkoutBtn = document.querySelector('a[href="checkout.html"]');
+  if (checkoutBtn) {
+    const isEmpty = cart.length === 0;
+    checkoutBtn.classList.toggle('is-disabled', isEmpty);
+    checkoutBtn.setAttribute('aria-disabled', String(isEmpty));
+  }
 }
 
-// every Add to Cart button on the page
+function showToast(message) {
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast';
+    toast.setAttribute('role', 'status');
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = message + ' <a href="cart.html">View cart</a>';
+  toast.classList.add('is-visible');
+  clearTimeout(toast.hideTimer);
+  toast.hideTimer = setTimeout(function () {
+    toast.classList.remove('is-visible');
+  }, 3000);
+}
+
 document.querySelectorAll('.js-add-to-cart').forEach(function (btn) {
   btn.addEventListener('click', function () {
-    addToCart(btn.dataset.productId);
+    const id = btn.dataset.productId;
+    addToCart(id);
+    const product = getProductById(id);
+    showToast((product ? product.name : 'Item') + ' added to cart');
   });
 });
 

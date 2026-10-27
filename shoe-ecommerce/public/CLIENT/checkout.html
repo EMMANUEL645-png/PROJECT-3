@@ -218,7 +218,7 @@
                       <div class="radio-card__desc">Estimated 3–5 working days nationwide</div>
                     </div>
                   </div>
-                  <div class="radio-card__price">Free</div>
+                  <div class="radio-card__price" id="standard-price">Free</div>
                 </label>
                 <label class="radio-card">
                   <div class="radio-card__left">
@@ -290,12 +290,12 @@
 
               <div class="summary-rows">
                 <div class="summary-row">
-                  <span>Subtotal (0 items)</span>
+                  <span>Subtotal (<span id="checkout-item-count">0</span> items)</span>
                   <span id="checkout-subtotal">₦0</span>
                 </div>
                 <div class="summary-row">
                   <span>Delivery Method</span>
-                  <span>Free</span>
+                  <span id="checkout-delivery">—</span>
                 </div>
                 <div class="summary-row summary-row--total">
                   <span>Total Due</span>
@@ -321,6 +321,24 @@
             </div>
           </div>
 
+        </div>
+
+        <div id="order-success" class="order-success" hidden>
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 12l3 3 5-6"></path>
+          </svg>
+          <h2 class="order-success__title">Thank you for your order!</h2>
+          <p class="order-success__text">
+            Your order <strong id="order-success-number"></strong> has been placed.
+            Total: <strong id="order-success-total"></strong>.
+            We will contact you on <strong id="order-success-contact"></strong> to confirm delivery.
+          </p>
+          <div class="order-success__actions">
+            <a href="shop.html" class="btn btn--primary">Continue Shopping</a>
+            <a href="index.html" class="btn btn--outline">Back to Home</a>
+          </div>
         </div>
       </div>
     </section>
@@ -381,5 +399,6 @@
   </footer>
 
   <script type="module" src="JS/cart.js"></script>
+  <script type="module" src="JS/checkout.js"></script>
 </body>
 </html>

@@ -673,3 +673,32 @@
   }
 }
 
+.order-success {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.order-success svg { color: #2E7D32; margin: 0 auto 1.5rem; display: block; }
+.order-success__title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+.order-success__text {
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.order-success__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
