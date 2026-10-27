@@ -1,0 +1,144 @@
+/* ==========================================================================
+   StrideStyle Shoe E-Commerce - Shop Page Styles
+   File: shop.css
+   ========================================================================== */
+
+.shop-main {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-6);
+}
+
+/* --------------------------------------------------------------------------
+   Shop Toolbar (Search, Filter Chips, Sort, Count)
+   -------------------------------------------------------------------------- */
+.shop-toolbar {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.shop-toolbar__search-box {
+  position: relative;
+  min-width: 260px;
+  flex: 1 1 260px;
+  max-width: 360px;
+}
+
+.shop-toolbar__search-icon {
+  position: absolute;
+  left: 1.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.shop-toolbar__search-input {
+  width: 100%;
+  padding-left: 2.875rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop-toolbar__search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(240, 135, 74, 0.16);
+}
+
+.shop-toolbar__filters {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-chip.is-active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.shop-toolbar__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.shop-toolbar__sort-select {
+  padding: 0.625rem 2rem 0.625rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.shop-toolbar__sort-select:focus {
+  border-color: var(--color-primary);
+}
+
+.shop-toolbar__count {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Shop Product Grid & Pagination
+   -------------------------------------------------------------------------- */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 4rem;
+}
+
+.shop-load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.shop-load-more .btn--outline {
+  max-width: 240px;
+}

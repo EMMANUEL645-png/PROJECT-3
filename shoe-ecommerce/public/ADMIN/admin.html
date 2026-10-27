@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | StrideStyle</title>
+  <meta name="description" content="Manage inventory, track nationwide orders and monitor sales performance for StrideStyle.">
+
+  <!-- Google Fonts: Prata, Lora, Poppins, Noto Sans fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:wght@400..700&family=Poppins:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../CLIENT/CSS/style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout">
+    <!-- Sidebar (Dark) -->
+    <aside class="admin-sidebar" aria-label="Admin Navigation">
+      <div class="admin-sidebar__brand">
+        <a href="admin.html" class="admin-sidebar__logo">StrideStyle</a>
+        <span class="admin-sidebar__tag">Admin Portal</span>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="admin.html" class="admin-nav__link is-active" aria-current="page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#inventory" class="admin-nav__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Products</span>
+        </a>
+        <a href="#orders" class="admin-nav__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Orders</span>
+        </a>
+        <a href="#customers" class="admin-nav__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span>Customers</span>
+        </a>
+        <a href="#settings" class="admin-nav__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="admin-sidebar__footer">
+        <a href="../CLIENT/index.html" class="admin-sidebar__store-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>View Online Store</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <h1 class="admin-topbar__title">Dashboard</h1>
+        <div class="admin-topbar__user">
+          <a href="#add-product" class="btn btn--primary btn--primary-sm">+ Add Product</a>
+          <div class="admin-user-avatar" title="Store Manager">SM</div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="admin-content">
+        <!-- Stat Cards Grid -->
+        <section class="admin-stats-grid" aria-label="Key Performance Indicators">
+          <!-- Total Sales -->
+          <div class="stat-card">
+            <div class="stat-card__info">
+              <span class="stat-card__label">Total Sales</span>
+              <span class="stat-card__value">₦8,450,000</span>
+              <span class="stat-card__subtext">&uarr; +14.2% from last month</span>
+            </div>
+            <div class="stat-card__icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Total Orders -->
+          <div class="stat-card">
+            <div class="stat-card__info">
+              <span class="stat-card__label">Total Orders</span>
+              <span class="stat-card__value">142</span>
+              <span class="stat-card__subtext">&uarr; +8.4% this week</span>
+            </div>
+            <div class="stat-card__icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Total Products -->
+          <div class="stat-card">
+            <div class="stat-card__info">
+              <span class="stat-card__label">Active Products</span>
+              <span class="stat-card__value">26</span>
+              <span class="stat-card__subtext">4 brand categories</span>
+            </div>
+            <div class="stat-card__icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Total Customers -->
+          <div class="stat-card">
+            <div class="stat-card__info">
+              <span class="stat-card__label">Customers</span>
+              <span class="stat-card__value">98</span>
+              <span class="stat-card__subtext">&uarr; +12 new registrations</span>
+            </div>
+            <div class="stat-card__icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- Add Product Form Card -->
+        <!-- JS HOOK: Admin add product form -->
+        <section id="add-product" class="admin-section" aria-labelledby="add-product-title">
+          <div class="admin-section__head">
+            <h2 id="add-product-title" class="admin-section__title">Add New Sneaker Product</h2>
+          </div>
+          <form id="add-product-form" action="#" method="POST">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="prod-name" class="form-label">Product Name *</label>
+                <input type="text" id="prod-name" name="name" class="form-input" required placeholder="e.g. Air Jordan 4 Bred Reimagined">
+              </div>
+              <div class="form-group">
+                <label for="prod-price" class="form-label">Price in Naira (₦) *</label>
+                <input type="number" id="prod-price" name="price" class="form-input" required placeholder="e.g. 175000">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="prod-category" class="form-label">Category *</label>
+                <select id="prod-category" name="category" class="form-select" required>
+                  <option value="jordan">Jordan</option>
+                  <option value="nike">Nike</option>
+                  <option value="classics">Classics</option>
+                  <option value="street">Street</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="prod-stock" class="form-label">Stock Quantity *</label>
+                <input type="number" id="prod-stock" name="stock" class="form-input" required value="15" min="0">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="prod-image" class="form-label">Product Image *</label>
+              <input type="file" id="prod-image" name="image" class="form-input" accept="image/*">
+            </div>
+
+            <div class="form-group">
+              <label for="prod-desc" class="form-label">Description</label>
+              <textarea id="prod-desc" name="description" class="form-textarea" placeholder="Detailed product craftsmanship and materials..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Save Product</button>
+          </form>
+        </section>
+
+        <!-- Products Table -->
+        <!-- JS HOOK: Admin products table -->
+        <section id="inventory" class="admin-section" aria-labelledby="inventory-title">
+          <div class="admin-section__head">
+            <h2 id="inventory-title" class="admin-section__title">Inventory Management</h2>
+          </div>
+          <div class="admin-table-wrapper">
+            <table id="admin-products-table" class="admin-table">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Product Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row 1: P01 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/jordan-4-orange-crackle.jpg" alt="Air Jordan 4 Orange Crackle" class="admin-prod-thumb"></td>
+                  <td><strong>Air Jordan 4 Orange Crackle</strong></td>
+                  <td>Jordan</td>
+                  <td>₦185,000</td>
+                  <td>12 pairs</td>
+                  <td><span class="admin-badge admin-badge--success">In Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p01">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p01">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 2: P02 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/jordan-4-royalty-black-gold.jpg" alt="Air Jordan 4 Royalty" class="admin-prod-thumb"></td>
+                  <td><strong>Air Jordan 4 Royalty</strong></td>
+                  <td>Jordan</td>
+                  <td>₦175,000</td>
+                  <td>8 pairs</td>
+                  <td><span class="admin-badge admin-badge--success">In Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p02">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p02">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 3: P03 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/jordan-4-military-blue.jpg" alt="Air Jordan 4 Military Blue" class="admin-prod-thumb"></td>
+                  <td><strong>Air Jordan 4 Military Blue</strong></td>
+                  <td>Jordan</td>
+                  <td>₦165,000</td>
+                  <td>14 pairs</td>
+                  <td><span class="admin-badge admin-badge--success">In Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p03">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p03">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 4: P04 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/jordan-4-neon-grey.jpg" alt="Air Jordan 4 Neon" class="admin-prod-thumb"></td>
+                  <td><strong>Air Jordan 4 Neon</strong></td>
+                  <td>Jordan</td>
+                  <td>₦150,000</td>
+                  <td>3 pairs</td>
+                  <td><span class="admin-badge admin-badge--warning">Low Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p04">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p04">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 5: P05 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/jordan-4-oxidized-green.jpg" alt="Air Jordan 4 Oxidized Green" class="admin-prod-thumb"></td>
+                  <td><strong>Air Jordan 4 Oxidized Green</strong></td>
+                  <td>Jordan</td>
+                  <td>₦145,000</td>
+                  <td>18 pairs</td>
+                  <td><span class="admin-badge admin-badge--success">In Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p05">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p05">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 6: P06 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/jordan-4-infrared.jpg" alt="Air Jordan 4 Infrared" class="admin-prod-thumb"></td>
+                  <td><strong>Air Jordan 4 Infrared</strong></td>
+                  <td>Jordan</td>
+                  <td>₦170,000</td>
+                  <td>22 pairs</td>
+                  <td><span class="admin-badge admin-badge--success">In Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p06">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p06">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 7: P11 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/nike-dunk-low-navy-mocha.jpg" alt="Nike Dunk Low Navy Mocha" class="admin-prod-thumb"></td>
+                  <td><strong>Nike Dunk Low Navy Mocha</strong></td>
+                  <td>Nike</td>
+                  <td>₦75,000</td>
+                  <td>25 pairs</td>
+                  <td><span class="admin-badge admin-badge--success">In Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p11">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p11">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 8: P18 -->
+                <tr>
+                  <td><img src="../CLIENT/IMAGES/shoes/adidas-samba-lt-green.jpg" alt="Adidas Samba LT Green" class="admin-prod-thumb"></td>
+                  <td><strong>Adidas Samba LT Green</strong></td>
+                  <td>Classics</td>
+                  <td>₦90,000</td>
+                  <td>11 pairs</td>
+                  <td><span class="admin-badge admin-badge--success">In Stock</span></td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <button type="button" class="btn-admin-action btn-admin-action--edit js-edit-product" data-product-id="p18">Edit</button>
+                      <button type="button" class="btn-admin-action btn-admin-action--delete js-delete-product" data-product-id="p18">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section id="orders" class="admin-section" aria-labelledby="orders-title">
+          <div class="admin-section__head">
+            <h2 id="orders-title" class="admin-section__title">Recent Nationwide Orders</h2>
+          </div>
+          <div class="admin-table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>State</th>
+                  <th>Items</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#SS-8921</td>
+                  <td>Emeka Okonkwo</td>
+                  <td>Lagos</td>
+                  <td>Air Jordan 4 Infrared (43)</td>
+                  <td>Oct 26, 2026</td>
+                  <td>₦170,000</td>
+                  <td><span class="admin-badge admin-badge--success">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>#SS-8920</td>
+                  <td>Amina Bello</td>
+                  <td>FCT - Abuja</td>
+                  <td>Nike Dunk Low (42), Samba LT (41)</td>
+                  <td>Oct 26, 2026</td>
+                  <td>₦165,000</td>
+                  <td><span class="admin-badge admin-badge--info">In Transit</span></td>
+                </tr>
+                <tr>
+                  <td>#SS-8919</td>
+                  <td>Babajide Sanwo</td>
+                  <td>Ogun</td>
+                  <td>Air Jordan 4 Royalty (44)</td>
+                  <td>Oct 25, 2026</td>
+                  <td>₦175,000</td>
+                  <td><span class="admin-badge admin-badge--info">In Transit</span></td>
+                </tr>
+                <tr>
+                  <td>#SS-8918</td>
+                  <td>Ifeoma Eze</td>
+                  <td>Rivers</td>
+                  <td>Air Jordan 4 Orange Crackle (41)</td>
+                  <td>Oct 25, 2026</td>
+                  <td>₦185,000</td>
+                  <td><span class="admin-badge admin-badge--warning">Processing</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- JS: link my script here later, e.g. <script src="JS/script.js" defer></script> -->
+</body>
+</html>

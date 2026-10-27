@@ -1,0 +1,437 @@
+/* ==========================================================================
+   StrideStyle Shoe E-Commerce - Responsive Media Queries
+   File: responsive.css
+   Loaded last across all client pages
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Laptop / Small Desktop (992px - 1199px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  :root {
+    --container: 960px;
+    --gutter: 2rem;
+  }
+
+  /* Hero */
+  .hero__container {
+    gap: 2rem;
+  }
+
+  .hero__content {
+    flex: 0 0 55%;
+  }
+
+  .hero__media {
+    flex: 0 0 40%;
+  }
+
+  /* Collection Collage */
+  .collections-grid {
+    gap: 18px;
+  }
+
+  /* Shop Grid */
+  .shop-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Newsletter Card */
+  .newsletter {
+    width: 86%;
+    padding: 2.5rem 2.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet (768px - 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  :root {
+    --space-6: 4.5rem;
+    --space-5: 3.5rem;
+  }
+
+  /* Hero Stacks */
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 7.5rem;
+  }
+
+  .hero__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__content {
+    flex: 0 0 100%;
+    max-width: 640px;
+  }
+
+  .hero__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__media {
+    flex: 0 0 100%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .hero__card {
+    max-width: 380px;
+  }
+
+  /* Featured Pill Strip */
+  .featured-strip-wrapper {
+    margin-top: -5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .featured-pill {
+    border-width: 10px;
+    aspect-ratio: 2.8 / 1;
+  }
+
+  /* Collection Showcase Collapses to 2 Columns */
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collection-tall-col {
+    grid-column: 1 / 2;
+  }
+
+  .collection-center-col {
+    grid-column: 2 / 3;
+  }
+
+  .collection-right-col {
+    grid-column: 1 / 2;
+  }
+
+  .collection-bottom-row {
+    grid-column: 2 / 3;
+    justify-content: flex-start;
+  }
+
+  /* Pre Spring Stacks */
+  .prespring-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .prespring-tall-box {
+    min-height: 420px;
+  }
+
+  .prespring-content {
+    padding-right: 0;
+  }
+
+  /* Product Grids */
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Product Details Page */
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .product-gallery {
+    position: static;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Cart & Checkout Layout */
+  .cart-layout,
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary-card {
+    position: static;
+  }
+
+  /* Auth Split Screen */
+  .auth-split-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-brand-side {
+    padding: 3rem 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .auth-brand-side__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .auth-brand-side__img-card {
+    max-width: 260px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Hamburger & Medium Screen (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Show hamburger button */
+  .nav-toggle-label {
+    display: inline-flex;
+  }
+
+  /* Slide-down mobile nav driven by checkbox */
+  .site-header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-dark);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.35s ease, opacity 0.3s ease, visibility 0.35s;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-toggle:checked ~ .site-header .site-header__nav {
+    max-height: 320px;
+    opacity: 1;
+    visibility: visible;
+    padding: 1.5rem 0;
+  }
+
+  .site-header__link {
+    width: 100%;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    font-size: 1.125rem;
+  }
+
+  /* Product Grids 2 columns */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Shop Toolbar */
+  .shop-toolbar {
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .shop-toolbar__search-box {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .shop-toolbar__filters {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .shop-toolbar__meta {
+    justify-content: space-between;
+  }
+
+  /* Newsletter Stacks */
+  .newsletter-wrapper {
+    margin-top: -3.5rem;
+    margin-bottom: -4rem;
+  }
+
+  .newsletter {
+    width: 92%;
+    padding: 2.25rem 1.75rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .newsletter__form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter__input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .newsletter__btn {
+    width: 100%;
+  }
+
+  /* Footer Stacks */
+  .site-footer {
+    padding-top: 6.5rem;
+  }
+
+  .site-footer__main {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  /* Cart Item Stacking */
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .cart-item__controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Checkout Forms */
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile (< 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 575px) {
+  :root {
+    --fs-hero: 2.5rem;
+    --gutter: 1.25rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 1.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero__actions .btn--primary {
+    width: 100%;
+  }
+
+  /* Pill Strip: 1 image visible, play button centred */
+  .featured-strip-wrapper {
+    margin-top: -3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .featured-pill {
+    aspect-ratio: 2 / 1;
+    border-width: 8px;
+  }
+
+  .featured-pill__cell:first-child,
+  .featured-pill__cell:last-child {
+    display: none;
+  }
+
+  .featured-pill__play-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .featured-pill__play-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Collection Showcase single column */
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-tall-col,
+  .collection-center-col,
+  .collection-right-col,
+  .collection-bottom-row {
+    grid-column: 1 / -1;
+  }
+
+  .collection-bottom-row {
+    justify-content: space-between;
+  }
+
+  /* Product Cards Compact */
+  .product-card__caption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .product-card__price {
+    text-align: left;
+  }
+
+  .product-actions {
+    flex-wrap: wrap;
+  }
+
+  .product-actions .btn--primary {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  /* Buttons Minimum Height Guarantee */
+  .btn,
+  .btn--primary,
+  .btn--outline,
+  .btn--ghost,
+  .form-input,
+  .form-select {
+    min-height: 44px;
+  }
+
+  /* Promotional Banner */
+  .promo-banner {
+    height: 360px;
+  }
+
+  /* Auth */
+  .auth-card {
+    padding: 2rem 1.25rem;
+  }
+}
