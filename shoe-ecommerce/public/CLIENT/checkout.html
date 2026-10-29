@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout | StrideStyle</title>
   <meta name="description" content="Complete your StrideStyle order with secure delivery information and payment options across all Nigerian states.">
-  
-  <!-- Google Fonts: Prata, Lora, Poppins, Noto Sans fallback -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:wght@400..700&family=Poppins:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheets -->
+
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/cart.css">
   <link rel="stylesheet" href="CSS/responsive.css">
 </head>
 <body>
 
-  <!-- Mobile Navigation Toggle -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container site-header__container">
       <a href="index.html" class="site-header__logo" aria-label="StrideStyle Home">StrideStyle</a>
@@ -46,7 +42,6 @@
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
-        <!-- JS HOOK: Header cart badge -->
         <a href="cart.html" class="site-header__cart-btn" aria-label="View Shopping Cart">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
@@ -67,7 +62,6 @@
   </header>
 
   <main>
-    <!-- Page Title Band -->
     <div class="page-title-band">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -82,16 +76,12 @@
       </div>
     </div>
 
-    <!-- Checkout Main Section -->
     <section class="checkout-section" aria-label="Order Details and Shipping">
       <div class="container">
         <div class="checkout-layout">
-          
-          <!-- Left Column: Forms -->
-          <!-- JS HOOK: Checkout form -->
+
           <form id="checkout-form" class="checkout-forms" action="#" method="POST">
 
-            <!-- Step 1: Contact Information -->
             <div class="checkout-step-card">
               <div class="checkout-step-header">
                 <span class="checkout-step-badge">1</span>
@@ -109,13 +99,12 @@
               </div>
             </div>
 
-            <!-- Step 2: Delivery Address -->
             <div class="checkout-step-card">
               <div class="checkout-step-header">
                 <span class="checkout-step-badge">2</span>
                 <h2 class="checkout-step-title">Delivery Address</h2>
               </div>
-              
+
               <div class="form-grid-2">
                 <div class="form-group">
                   <label for="first-name" class="form-label">First Name *</label>
@@ -142,8 +131,7 @@
                   <label for="city" class="form-label">City / Town *</label>
                   <input type="text" id="city" name="city" class="form-input" autocomplete="address-level2" required placeholder="e.g. Ikeja, Lekki, Wuse">
                 </div>
-                
-                <!-- Nigerian States Select (All 36 + FCT) -->
+
                 <div class="form-group">
                   <label for="state-select" class="form-label">State *</label>
                   <select id="state-select" name="state" class="form-select" required>
@@ -203,7 +191,6 @@
               </div>
             </div>
 
-            <!-- Step 3: Delivery Method -->
             <div class="checkout-step-card">
               <div class="checkout-step-header">
                 <span class="checkout-step-badge">3</span>
@@ -233,7 +220,6 @@
               </div>
             </div>
 
-            <!-- Step 4: Payment Method -->
             <div class="checkout-step-card">
               <div class="checkout-step-header">
                 <span class="checkout-step-badge">4</span>
@@ -269,7 +255,6 @@
                 </label>
               </div>
 
-              <!-- Clear Demo Disclaimer Notice -->
               <div class="checkout-disclaimer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -282,8 +267,6 @@
 
           </form>
 
-          <!-- Right Column: Sticky Order Summary -->
-          <!-- JS HOOK: Order summary -->
           <div class="order-summary-wrapper">
             <div id="order-summary" class="surface-card order-summary-card">
               <h2 class="order-summary-card__title">Order Summary</h2>
@@ -344,7 +327,6 @@
     </section>
   </main>
 
-  <!-- Compact Footer (No Newsletter) -->
   <footer class="site-footer site-footer--compact" id="contact">
     <div class="container">
       <div class="site-footer__main">
@@ -399,6 +381,8 @@
   </footer>
 
   <script type="module" src="JS/cart.js"></script>
+  <script src="JS/auth.js"></script>
   <script type="module" src="JS/checkout.js"></script>
 </body>
 </html>
+

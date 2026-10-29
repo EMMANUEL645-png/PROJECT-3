@@ -3,7 +3,6 @@ import { getProductById } from './products.js';
 export const DELIVERY_FEE = 5000;
 export const FREE_DELIVERY_ABOVE = 150000;
 
-// load the saved cart, or start with an empty one
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function saveCart() {
@@ -24,7 +23,6 @@ export function formatNaira(amount) {
   return '₦' + amount.toLocaleString('en-NG');
 }
 
-// the little number on the cart icon
 function updateBadge() {
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
@@ -108,7 +106,6 @@ function displayCart() {
     cart.length === 0 ? '—' : (delivery === 0 ? 'Free' : formatNaira(delivery));
   document.getElementById('cart-total').textContent = formatNaira(subtotal + delivery);
 
-  // item count in the summary label
   let totalItems = 0;
   for (let i = 0; i < cart.length; i++) {
     totalItems += cart[i].qty;
@@ -116,7 +113,6 @@ function displayCart() {
   const countEl = document.getElementById('cart-item-count');
   if (countEl) countEl.textContent = totalItems;
 
-  // turn the checkout button on or off
   const checkoutBtn = document.querySelector('a[href="checkout.html"]');
   if (checkoutBtn) {
     const isEmpty = cart.length === 0;
@@ -151,9 +147,9 @@ document.querySelectorAll('.js-add-to-cart').forEach(function (btn) {
   });
 });
 
-// the onclick="" attributes in the cart HTML need these to be global
 window.changeQty = changeQty;
 window.deleteItem = deleteItem;
 
 updateBadge();
 displayCart();
+

@@ -1,19 +1,9 @@
-/* ==========================================================================
-   StrideStyle Shoe E-Commerce - Responsive Media Queries
-   File: responsive.css
-   Loaded last across all client pages
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   Laptop / Small Desktop (992px - 1199px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
   :root {
     --container: 960px;
     --gutter: 2rem;
   }
 
-  /* Hero */
   .hero__container {
     gap: 2rem;
   }
@@ -26,33 +16,26 @@
     flex: 0 0 40%;
   }
 
-  /* Collection Collage */
   .collections-grid {
     gap: 18px;
   }
 
-  /* Shop Grid */
   .shop-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Newsletter Card */
   .newsletter {
     width: 86%;
     padding: 2.5rem 2.75rem;
   }
 }
 
-/* --------------------------------------------------------------------------
-   Tablet (768px - 991px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
   :root {
     --space-6: 4.5rem;
     --space-5: 3.5rem;
   }
 
-  /* Hero Stacks */
   .hero {
     padding-top: 2rem;
     padding-bottom: 7.5rem;
@@ -88,7 +71,6 @@
     max-width: 380px;
   }
 
-  /* Featured Pill Strip */
   .featured-strip-wrapper {
     margin-top: -5rem;
     margin-bottom: 4.5rem;
@@ -99,7 +81,6 @@
     aspect-ratio: 2.8 / 1;
   }
 
-  /* Collection Showcase Collapses to 2 Columns */
   .collections-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -121,7 +102,6 @@
     justify-content: flex-start;
   }
 
-  /* Pre Spring Stacks */
   .prespring-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -135,7 +115,6 @@
     padding-right: 0;
   }
 
-  /* Product Grids */
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -144,7 +123,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Product Details Page */
   .product-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -157,13 +135,11 @@
     width: 100%;
   }
 
-  /* Products Sliders (3 per view up to 991px) */
   .products-grid--slider .product-card,
   .related-products-section .product-card {
     flex: 0 0 calc((100% - 48px) / 3);
   }
 
-  /* Cart & Checkout Layout */
   .cart-layout,
   .checkout-layout {
     grid-template-columns: 1fr;
@@ -173,7 +149,6 @@
     position: static;
   }
 
-  /* Auth Split Screen */
   .auth-split-wrapper {
     grid-template-columns: 1fr;
   }
@@ -194,16 +169,11 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Mobile Hamburger & Medium Screen (<= 768px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  /* Show hamburger button */
   .nav-toggle-label {
     display: inline-flex;
   }
 
-  /* Slide-down mobile nav driven by checkbox */
   .site-header__nav {
     position: absolute;
     top: 100%;
@@ -237,19 +207,16 @@
     font-size: 1.125rem;
   }
 
-  /* Product Grids 2 columns */
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
-  /* Products Sliders (2 per view up to 768px) */
   .products-grid--slider .product-card,
   .related-products-section .product-card {
     flex: 0 0 calc((100% - 24px) / 2);
   }
 
-  /* Trust Strip 2x2 grid */
   .trust-strip__container {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem 1rem;
@@ -259,13 +226,11 @@
     justify-content: flex-start;
   }
 
-  /* Shop Grid 2 columns on phones */
   .shop-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
-  /* Shop Grid Badges & Wishlist - Ensure they fit on mobile and do not overlap image subject */
   .shop-grid .product-card .card-badge {
     top: 0.5rem;
     left: 0.5rem;
@@ -280,7 +245,6 @@
     height: 36px;
   }
 
-  /* Expand touch target for mobile */
   .shop-grid .product-card .card-wishlist::after {
     content: "";
     position: absolute;
@@ -293,12 +257,6 @@
     height: 100%;
   }
 
-  /* Shop Toolbar - Stacking Order for mobile:
-     1. Search (full width)
-     2. Filter chips (one horizontally scrollable row, no wrapping)
-     3. Price filter and sort dropdown side by side (50% each)
-     4. Results count on its own line
-     Tap targets at least 44px high */
   .shop-toolbar {
     padding: 1.25rem;
     display: flex;
@@ -363,7 +321,6 @@
     margin-top: 0.25rem;
   }
 
-  /* Newsletter Stacks */
   .newsletter-wrapper {
     margin-top: -3.5rem;
     margin-bottom: -4rem;
@@ -391,7 +348,6 @@
     width: 100%;
   }
 
-  /* Footer Stacks */
   .site-footer {
     padding-top: 6.5rem;
   }
@@ -407,7 +363,6 @@
     text-align: center;
   }
 
-  /* Cart Item Stacking */
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
@@ -419,23 +374,18 @@
     justify-content: space-between;
   }
 
-  /* Checkout Forms */
   .form-grid-2 {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 }
 
-/* --------------------------------------------------------------------------
-   Small Mobile (< 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 575px) {
   :root {
     --fs-hero: 2.5rem;
     --gutter: 1.25rem;
   }
 
-  /* Hero */
   .hero {
     padding-top: 1.5rem;
     padding-bottom: 5.5rem;
@@ -451,7 +401,6 @@
     width: 100%;
   }
 
-  /* Pill Strip: 1 image visible, play button centred */
   .featured-strip-wrapper {
     margin-top: -3.5rem;
     margin-bottom: 3.5rem;
@@ -477,7 +426,6 @@
     height: 44px;
   }
 
-  /* Collection Showcase single column */
   .collections-grid {
     grid-template-columns: 1fr;
   }
@@ -493,7 +441,6 @@
     justify-content: space-between;
   }
 
-  /* Product Cards Compact */
   .product-card__caption {
     flex-direction: column;
     align-items: flex-start;
@@ -513,13 +460,11 @@
     min-width: 180px;
   }
 
-  /* Products Sliders (about 1.2 per view up to 575px) */
   .products-grid--slider .product-card,
   .related-products-section .product-card {
     flex: 0 0 80%;
   }
 
-  /* Trust Strip compact styling */
   .trust-strip {
     padding: 1.25rem 0;
   }
@@ -537,7 +482,6 @@
     font-size: 0.7rem;
   }
 
-  /* Buttons Minimum Height Guarantee */
   .btn,
   .btn--primary,
   .btn--outline,
@@ -547,13 +491,12 @@
     min-height: 44px;
   }
 
-  /* Promotional Banner */
   .promo-banner {
     height: 360px;
   }
 
-  /* Auth */
   .auth-card {
     padding: 2rem 1.25rem;
   }
 }
+

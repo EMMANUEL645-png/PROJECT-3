@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Account | StrideStyle</title>
   <meta name="description" content="Join StrideStyle to unlock free shipping on orders over ₦150,000, early access to sneaker drops, and member rewards.">
-  
-  <!-- Google Fonts: Prata, Lora, Poppins, Noto Sans fallback -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:wght@400..700&family=Poppins:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheets -->
+
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/cart.css">
   <link rel="stylesheet" href="CSS/responsive.css">
 </head>
 <body class="auth-page">
 
-  <!-- Mobile Navigation Toggle -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container site-header__container">
       <a href="index.html" class="site-header__logo" aria-label="StrideStyle Home">StrideStyle</a>
@@ -46,7 +42,6 @@
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
-        <!-- JS HOOK: Header cart badge -->
         <a href="cart.html" class="site-header__cart-btn" aria-label="View Shopping Cart">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
@@ -67,7 +62,6 @@
   </header>
 
   <main class="auth-split-wrapper">
-    <!-- Left Dark Brand Panel (P13 Nike Shox TL Volt) -->
     <div class="auth-brand-side">
       <div>
         <a href="index.html" class="auth-brand-side__logo">StrideStyle</a>
@@ -84,14 +78,12 @@
       <p class="auth-brand-side__footer-text">&copy; 2026 StrideStyle. Step into what's next.</p>
     </div>
 
-    <!-- Right Light Form Panel -->
     <div class="auth-form-side">
       <div class="auth-card">
         <h2 class="auth-card__title">Create Account</h2>
         <p class="auth-card__subtitle">Join thousands of sneaker enthusiasts today</p>
 
-        <!-- JS HOOK: Signup form -->
-        <form id="signup-form" action="#" method="POST">
+        <form id="signup-form" action="#" method="POST" novalidate>
           <div class="form-group">
             <label for="signup-name" class="form-label">Full Name *</label>
             <input type="text" id="signup-name" name="name" class="form-input" autocomplete="name" required placeholder="e.g. Tunde Williams">
@@ -143,7 +135,6 @@
             Create Account
           </button>
 
-          <!-- Status message for JS -->
           <p id="auth-message" class="auth-message" role="alert" hidden></p>
 
           <div class="auth-divider">OR</div>
@@ -166,7 +157,6 @@
     </div>
   </main>
 
-  <!-- Compact Footer (No Newsletter) -->
   <footer class="site-footer site-footer--compact" id="contact">
     <div class="container">
       <div class="site-footer__main">
@@ -221,5 +211,7 @@
   </footer>
 
   <script type="module" src="JS/cart.js"></script>
+  <script src="JS/auth.js"></script>
 </body>
 </html>
+

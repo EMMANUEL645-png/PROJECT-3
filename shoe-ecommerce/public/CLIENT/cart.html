@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart | StrideStyle</title>
   <meta name="description" content="Review your selected sneakers and proceed to checkout with fast, insured delivery anywhere in Nigeria.">
-  
-  <!-- Google Fonts: Prata, Lora, Poppins, Noto Sans fallback -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:wght@400..700&family=Poppins:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheets -->
+
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/cart.css">
   <link rel="stylesheet" href="CSS/responsive.css">
 </head>
 <body>
 
-  <!-- Mobile Navigation Toggle -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container site-header__container">
       <a href="index.html" class="site-header__logo" aria-label="StrideStyle Home">StrideStyle</a>
@@ -46,7 +42,6 @@
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
-        <!-- JS HOOK: Header cart badge -->
         <a href="cart.html" class="site-header__cart-btn" aria-label="View Shopping Cart">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
@@ -67,7 +62,6 @@
   </header>
 
   <main>
-    <!-- Page Title Band -->
     <div class="page-title-band">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -80,19 +74,13 @@
       </div>
     </div>
 
-    <!-- Cart Main Section -->
     <section class="cart-section" aria-label="Your Cart Items">
       <div class="container">
         <div class="cart-layout">
-          
-          <!-- Left Column: Items List -->
+
           <div class="cart-items-container">
-            <!-- Active Items Wrapper -->
-            <!-- JS HOOK: Cart page content -->
             <div id="cart-content" class="cart-items-list"></div>
 
-            <!-- Empty Cart State (Hidden by default) -->
-            <!-- JS HOOK: Empty cart state -->
             <div id="cart-empty" class="cart-empty-state">
               <div class="cart-empty-icon" aria-hidden="true">
                 <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -107,12 +95,10 @@
             </div>
           </div>
 
-          <!-- Right Column: Sticky Summary Card -->
           <div class="order-summary-wrapper">
             <div class="surface-card order-summary-card">
               <h2 class="order-summary-card__title">Order Summary</h2>
 
-              <!-- Totals Rows -->
               <div class="summary-rows">
                 <div class="summary-row">
                   <span>Subtotal (<span id="cart-item-count">0</span> items)</span>
@@ -128,19 +114,16 @@
                 </div>
               </div>
 
-              <!-- Promo Code Box -->
               <form class="promo-form" action="#" method="POST">
                 <input type="text" class="form-input" placeholder="Promo code (e.g. STRIDE20)" aria-label="Promo code">
                 <button type="submit" class="btn btn--outline">Apply</button>
               </form>
 
-              <!-- Actions -->
               <div class="summary-actions">
                 <a href="checkout.html" class="btn btn--primary is-disabled" aria-disabled="true" style="width: 100%;">Proceed to Checkout</a>
                 <a href="shop.html" class="btn btn--outline" style="width: 100%;">Continue Shopping</a>
               </div>
 
-              <!-- Free Shipping Badge -->
               <div class="summary-badge-note">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
@@ -154,14 +137,12 @@
       </div>
     </section>
 
-    <!-- Newsletter Card (Straddling) -->
     <div class="container newsletter-wrapper">
       <section class="newsletter" aria-labelledby="newsletter-heading">
         <div class="newsletter__info">
           <h2 id="newsletter-heading" class="newsletter__title">Subscribe Newsletter</h2>
           <p class="newsletter__text">Shoe Perks Members Get Free Shipping &amp; Exclusive Rewards!</p>
         </div>
-        <!-- JS HOOK: Newsletter form -->
         <form id="newsletter-form" class="newsletter__form" action="#" method="POST">
           <input type="email" id="newsletter-email" class="newsletter__input" placeholder="Enter Your Email" required aria-label="Email address for newsletter">
           <button type="submit" class="newsletter__btn">Get Started</button>
@@ -171,7 +152,6 @@
     </div>
   </main>
 
-  <!-- Footer (Dark) -->
   <footer class="site-footer" id="contact">
     <div class="container">
       <div class="site-footer__main">
@@ -226,5 +206,7 @@
   </footer>
 
   <script type="module" src="JS/cart.js"></script>
+  <script src="JS/auth.js"></script>
 </body>
 </html>
+

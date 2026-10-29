@@ -1,17 +1,9 @@
-/* ==========================================================================
-   StrideStyle Shoe E-Commerce - Shop Page Styles
-   File: shop.css
-   ========================================================================== */
-
 .shop-main {
   background-color: var(--color-bg-light);
   padding-top: var(--space-5);
   padding-bottom: var(--space-6);
 }
 
-/* --------------------------------------------------------------------------
-   Shop Toolbar (Search, Filter Chips, Sort, Count)
-   -------------------------------------------------------------------------- */
 .shop-toolbar {
   background-color: var(--color-white);
   border-radius: var(--radius-md);
@@ -123,9 +115,6 @@
   white-space: nowrap;
 }
 
-/* --------------------------------------------------------------------------
-   Shop Product Grid & Pagination
-   -------------------------------------------------------------------------- */
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -133,15 +122,10 @@
   margin-bottom: 4rem;
 }
 
-/* --------------------------------------------------------------------------
-   Shop Grid Specific Product Card Styles (Badges & Wishlist)
-   Scoped to .shop-grid .product-card to preserve shared styles
-   -------------------------------------------------------------------------- */
 .shop-grid .product-card .product-card__media {
   position: relative;
 }
 
-/* Pill Badges */
 .shop-grid .product-card .card-badge,
 .card-badge {
   position: absolute;
@@ -177,7 +161,6 @@
   color: var(--color-white);
 }
 
-/* Circular Wishlist Button */
 .shop-grid .product-card .card-wishlist,
 .card-wishlist {
   position: absolute;
@@ -225,10 +208,6 @@
   outline-offset: 2px;
 }
 
-/* --------------------------------------------------------------------------
-   No Results / Empty State
-   Styled like the cart empty state (white card, centred, soft shadow, generous padding)
-   -------------------------------------------------------------------------- */
 .shop-empty {
   background-color: var(--color-white);
   border-radius: var(--radius-md);
@@ -239,7 +218,6 @@
   margin: 0 auto 3rem;
 }
 
-/* Ensure [hidden] attribute strictly hides element */
 .shop-empty[hidden],
 [hidden] {
   display: none !important;
@@ -273,9 +251,6 @@
   margin-bottom: 2rem;
 }
 
-/* --------------------------------------------------------------------------
-   Load More Button
-   -------------------------------------------------------------------------- */
 .shop-load-more {
   display: flex;
   justify-content: center;
@@ -285,3 +260,4 @@
 .shop-load-more .btn--outline {
   max-width: 240px;
 }
+

@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StrideStyle | Shop All Sneakers</title>
   <meta name="description" content="Explore our curated catalog of authentic streetwear, high-top and running silhouettes.">
-  
-  <!-- Google Fonts: Prata, Lora, Poppins, Noto Sans fallback -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:wght@400..700&family=Poppins:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheets -->
+
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/shop.css">
   <link rel="stylesheet" href="CSS/responsive.css">
 </head>
 <body>
 
-  <!-- Mobile Navigation Toggle -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container site-header__container">
       <a href="index.html" class="site-header__logo" aria-label="StrideStyle Home">StrideStyle</a>
@@ -46,7 +42,6 @@
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
-        <!-- JS HOOK: Header cart badge -->
         <a href="cart.html" class="site-header__cart-btn" aria-label="View Shopping Cart">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
@@ -67,7 +62,6 @@
   </header>
 
   <main>
-    <!-- Page Title Band -->
     <div class="page-title-band">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -80,13 +74,9 @@
       </div>
     </div>
 
-    <!-- Shop Content Section -->
     <section class="shop-main" aria-label="Products Catalog">
       <div class="container">
-        <!-- Toolbar -->
-        <!-- JS HOOK: Shop page toolbar -->
         <div class="shop-toolbar">
-          <!-- Search input -->
           <div class="shop-toolbar__search-box">
             <span class="shop-toolbar__search-icon" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -97,7 +87,6 @@
             <input type="search" id="shop-search" class="shop-toolbar__search-input" placeholder="Search by name or model..." aria-label="Search shoes">
           </div>
 
-          <!-- Category filter chips -->
           <div class="shop-toolbar__filters" role="group" aria-label="Filter by Category">
             <button type="button" class="filter-chip is-active" data-filter="all">All</button>
             <button type="button" class="filter-chip" data-filter="jordan">Jordan</button>
@@ -106,7 +95,6 @@
             <button type="button" class="filter-chip" data-filter="street">Street</button>
           </div>
 
-          <!-- Meta (Sort + Count) -->
           <div class="shop-toolbar__meta">
             <select id="price-filter" class="shop-toolbar__sort-select" aria-label="Filter by price">
               <option value="all">All prices</option>
@@ -124,11 +112,8 @@
           </div>
         </div>
 
-        <!-- Product Grid: 26 Shoes -->
-        <!-- JS HOOK: Shop page product grid -->
         <div id="product-grid" class="shop-grid" data-batch="12" data-total="26">
 
-          <!-- P01: Air Jordan 4 Orange Crackle -->
           <article class="product-card" data-product-id="p01" data-name="Air Jordan 4 Orange Crackle" data-price="185000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-orange-crackle.jpg">
             <div class="product-card__media tile-peach">
               <span class="card-badge card-badge--new">New</span>
@@ -148,7 +133,6 @@
             </div>
           </article>
 
-          <!-- P02: Air Jordan 4 Royalty (Cutout) -->
           <article class="product-card" data-product-id="p02" data-name="Air Jordan 4 Royalty" data-price="175000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-royalty-black-gold.jpg">
             <div class="product-card__media tile-gray">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Royalty to wishlist">
@@ -167,7 +151,6 @@
             </div>
           </article>
 
-          <!-- P03: Air Jordan 4 Military Blue (Cutout) -->
           <article class="product-card" data-product-id="p03" data-name="Air Jordan 4 Military Blue" data-price="165000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-military-blue.jpg">
             <div class="product-card__media tile-sky">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Military Blue to wishlist">
@@ -186,7 +169,6 @@
             </div>
           </article>
 
-          <!-- P04: Air Jordan 4 Neon (Cutout) -->
           <article class="product-card" data-product-id="p04" data-name="Air Jordan 4 Neon" data-price="150000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-neon-grey.jpg">
             <div class="product-card__media tile-beige">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Neon to wishlist">
@@ -205,7 +187,6 @@
             </div>
           </article>
 
-          <!-- P05: Air Jordan 4 Oxidized Green -->
           <article class="product-card" data-product-id="p05" data-name="Air Jordan 4 Oxidized Green" data-price="145000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-oxidized-green.jpg">
             <div class="product-card__media tile-mint">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Oxidized Green to wishlist">
@@ -224,7 +205,6 @@
             </div>
           </article>
 
-          <!-- P06: Air Jordan 4 Infrared -->
           <article class="product-card" data-product-id="p06" data-name="Air Jordan 4 Infrared" data-price="170000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-infrared.jpg">
             <div class="product-card__media tile-gray-dark">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Infrared to wishlist">
@@ -243,7 +223,6 @@
             </div>
           </article>
 
-          <!-- P07: Air Jordan 4 Grey Black -->
           <article class="product-card" data-product-id="p07" data-name="Air Jordan 4 Grey Black" data-price="130000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-grey-black.jpg">
             <div class="product-card__media tile-gray-mid">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 4 Grey Black to wishlist">
@@ -262,7 +241,6 @@
             </div>
           </article>
 
-          <!-- P08: Air Jordan 4 KAWS -->
           <article class="product-card" data-product-id="p08" data-name="Air Jordan 4 KAWS" data-price="195000" data-category="jordan" data-image="IMAGES/shoes/jordan-4-kaws-grey.jpg">
             <div class="product-card__media tile-gray">
               <span class="card-badge card-badge--low-stock">Low Stock</span>
@@ -282,7 +260,6 @@
             </div>
           </article>
 
-          <!-- P09: Air Jordan 7 Black Gold -->
           <article class="product-card" data-product-id="p09" data-name="Air Jordan 7 Black Gold" data-price="155000" data-category="jordan" data-image="IMAGES/shoes/jordan-7-black-gold.jpg">
             <div class="product-card__media tile-peach">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Jordan 7 Black Gold to wishlist">
@@ -301,7 +278,6 @@
             </div>
           </article>
 
-          <!-- P10: Air Jordan 1 High Dark Mocha -->
           <article class="product-card" data-product-id="p10" data-name="Air Jordan 1 High Dark Mocha" data-price="160000" data-category="jordan" data-image="IMAGES/shoes/jordan-1-high-dark-mocha.jpg">
             <div class="product-card__media tile-mint">
               <span class="card-badge card-badge--best-seller">Best Seller</span>
@@ -321,7 +297,6 @@
             </div>
           </article>
 
-          <!-- P11: Nike Dunk Low Navy Mocha -->
           <article class="product-card" data-product-id="p11" data-name="Nike Dunk Low Navy Mocha" data-price="75000" data-category="nike" data-image="IMAGES/shoes/nike-dunk-low-navy-mocha.jpg">
             <div class="product-card__media tile-pink">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Dunk Low Navy Mocha to wishlist">
@@ -340,7 +315,6 @@
             </div>
           </article>
 
-          <!-- P12: Nike Shox R4 Black Silver -->
           <article class="product-card" data-product-id="p12" data-name="Nike Shox R4 Black Silver" data-price="135000" data-category="nike" data-image="IMAGES/shoes/nike-shox-r4-black-silver.jpg">
             <div class="product-card__media tile-blush">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Shox R4 Black Silver to wishlist">
@@ -359,7 +333,6 @@
             </div>
           </article>
 
-          <!-- P13: Nike Shox TL Volt -->
           <article class="product-card" data-product-id="p13" data-name="Nike Shox TL Volt" data-price="145000" data-category="nike" data-image="IMAGES/shoes/nike-shox-tl-volt-green.jpg">
             <div class="product-card__media tile-gray">
               <span class="card-badge card-badge--new">New</span>
@@ -379,7 +352,6 @@
             </div>
           </article>
 
-          <!-- P14: Nike Shox TL Bred -->
           <article class="product-card" data-product-id="p14" data-name="Nike Shox TL Bred" data-price="150000" data-category="nike" data-image="IMAGES/shoes/nike-shox-tl-black-red.jpg">
             <div class="product-card__media tile-tan">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Shox TL Bred to wishlist">
@@ -398,7 +370,6 @@
             </div>
           </article>
 
-          <!-- P15: Nike Shox TL Triple Black -->
           <article class="product-card" data-product-id="p15" data-name="Nike Shox TL Triple Black" data-price="148000" data-category="nike" data-image="IMAGES/shoes/nike-shox-tl-triple-black.jpg">
             <div class="product-card__media tile-beige">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Shox TL Triple Black to wishlist">
@@ -417,7 +388,6 @@
             </div>
           </article>
 
-          <!-- P16: Nike Air Max 95 Greyscale -->
           <article class="product-card" data-product-id="p16" data-name="Nike Air Max 95 Greyscale" data-price="168000" data-category="nike" data-image="IMAGES/shoes/nike-air-max-95-grey-gradient.jpg">
             <div class="product-card__media tile-gray-dark">
               <span class="card-badge card-badge--best-seller">Best Seller</span>
@@ -437,7 +407,6 @@
             </div>
           </article>
 
-          <!-- P17: Nike Air Max Plus Gradient -->
           <article class="product-card" data-product-id="p17" data-name="Nike Air Max Plus Gradient" data-price="125000" data-category="nike" data-image="IMAGES/shoes/nike-air-max-plus-black-grey.jpg">
             <div class="product-card__media tile-pink">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Nike Air Max Plus Gradient to wishlist">
@@ -456,7 +425,6 @@
             </div>
           </article>
 
-          <!-- P18: Adidas Samba LT Green -->
           <article class="product-card" data-product-id="p18" data-name="Adidas Samba LT Green" data-price="90000" data-category="classics" data-image="IMAGES/shoes/adidas-samba-lt-green.jpg">
             <div class="product-card__media tile-gray-mid">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Adidas Samba LT Green to wishlist">
@@ -475,7 +443,6 @@
             </div>
           </article>
 
-          <!-- P19: New Balance 740 Black (Cutout) -->
           <article class="product-card" data-product-id="p19" data-name="New Balance 740 Black" data-price="110000" data-category="classics" data-image="IMAGES/shoes/new-balance-740-black.jpg">
             <div class="product-card__media tile-gray-dark">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add New Balance 740 Black to wishlist">
@@ -494,7 +461,6 @@
             </div>
           </article>
 
-          <!-- P20: Retro Training Yellow (Cutout) -->
           <article class="product-card" data-product-id="p20" data-name="Retro Training Yellow" data-price="95000" data-category="street" data-image="IMAGES/shoes/retro-training-yellow.jpg">
             <div class="product-card__media tile-cream">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Retro Training Yellow to wishlist">
@@ -513,7 +479,6 @@
             </div>
           </article>
 
-          <!-- P21: Retro Star Denim (Cutout) -->
           <article class="product-card" data-product-id="p21" data-name="Retro Star Denim" data-price="100000" data-category="street" data-image="IMAGES/shoes/retro-star-denim.jpg">
             <div class="product-card__media tile-peach">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Retro Star Denim to wishlist">
@@ -532,7 +497,6 @@
             </div>
           </article>
 
-          <!-- P22: Chunky Street Black Gold -->
           <article class="product-card" data-product-id="p22" data-name="Chunky Street Black Gold" data-price="70000" data-category="street" data-image="IMAGES/shoes/chunky-street-black-gold.jpg">
             <div class="product-card__media tile-gray">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Chunky Street Black Gold to wishlist">
@@ -551,7 +515,6 @@
             </div>
           </article>
 
-          <!-- P23: Sport Fashion High-Top -->
           <article class="product-card" data-product-id="p23" data-name="Sport Fashion High-Top" data-price="55000" data-category="street" data-image="IMAGES/shoes/sport-fashion-high-top-black-white.jpg">
             <div class="product-card__media tile-beige">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Sport Fashion High-Top to wishlist">
@@ -570,7 +533,6 @@
             </div>
           </article>
 
-          <!-- P24: Sport Fashion Runner White Red -->
           <article class="product-card" data-product-id="p24" data-name="Sport Fashion Runner White Red" data-price="60000" data-category="street" data-image="IMAGES/shoes/sport-fashion-runner-white-red.jpg">
             <div class="product-card__media tile-pink">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Sport Fashion Runner White Red to wishlist">
@@ -589,7 +551,6 @@
             </div>
           </article>
 
-          <!-- P25: Street Runner 23 White Blue -->
           <article class="product-card" data-product-id="p25" data-name="Street Runner 23 White Blue" data-price="65000" data-category="street" data-image="IMAGES/shoes/street-runner-23-white-blue.jpg">
             <div class="product-card__media tile-mint">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Street Runner 23 White Blue to wishlist">
@@ -608,7 +569,6 @@
             </div>
           </article>
 
-          <!-- P26: Air Cushion Runner White Black -->
           <article class="product-card" data-product-id="p26" data-name="Air Cushion Runner White Black" data-price="80000" data-category="street" data-image="IMAGES/shoes/air-cushion-runner-white-black.jpg">
             <div class="product-card__media tile-blush">
               <button type="button" class="card-wishlist js-wishlist" aria-label="Add Air Cushion Runner White Black to wishlist">
@@ -629,8 +589,6 @@
 
         </div>
 
-        <!-- No Results / Empty State -->
-        <!-- JS HOOK: Empty search/filter state -->
         <div id="shop-empty" class="shop-empty" hidden>
           <div class="shop-empty__icon" aria-hidden="true">
             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -643,22 +601,18 @@
           <button type="button" id="clear-filters" class="btn btn--primary">Clear Filters</button>
         </div>
 
-        <!-- Load More Button -->
-        <!-- JS HOOK: Load more -->
         <div class="shop-load-more">
           <button type="button" class="btn btn--outline" id="load-more">Load More</button>
         </div>
       </div>
     </section>
 
-    <!-- Newsletter Card (Straddling) -->
     <div class="container newsletter-wrapper">
       <section class="newsletter" aria-labelledby="newsletter-heading">
         <div class="newsletter__info">
           <h2 id="newsletter-heading" class="newsletter__title">Subscribe Newsletter</h2>
           <p class="newsletter__text">Shoe Perks Members Get Free Shipping &amp; Exclusive Rewards!</p>
         </div>
-        <!-- JS HOOK: Newsletter form -->
         <form id="newsletter-form" class="newsletter__form" action="#" method="POST">
           <input type="email" id="newsletter-email" class="newsletter__input" placeholder="Enter Your Email" required aria-label="Email address for newsletter">
           <button type="submit" class="newsletter__btn">Get Started</button>
@@ -668,7 +622,6 @@
     </div>
   </main>
 
-  <!-- Footer (Dark) -->
   <footer class="site-footer" id="contact">
     <div class="container">
       <div class="site-footer__main">
@@ -677,8 +630,8 @@
           <p class="site-footer__desc">
             Fresh drops, street classics and exclusive sneaker releases, delivered to your door.
           </p>
-          <a href="mailto:contact@stridestyle.com" class="site-footer__email">
-            contact@stridestyle.com
+          <a href="mailto:emmanuelasekhame64@gmail.com" class="site-footer__email">
+            emmanuelasekhame64@gmail.com
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
@@ -687,8 +640,8 @@
         </div>
 
         <div class="site-footer__social">
-          <h3 class="site-footer__social-label">Social media</h3>
-          <div class="site-footer__social-icons">
+          <!-- <h3 class="site-footer__social-label">Social media</h3> -->
+          <!-- <div class="site-footer__social-icons">
             <a href="https://facebook.com" class="site-footer__social-icon" aria-label="Facebook" target="_blank" rel="noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -706,7 +659,7 @@
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
               </svg>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -723,5 +676,7 @@
   </footer>
 
   <script type="module" src="JS/cart.js"></script>
+  <script src="JS/auth.js"></script>
 </body>
 </html>
+

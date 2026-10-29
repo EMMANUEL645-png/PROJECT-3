@@ -1,14 +1,4 @@
-/* ==========================================================================
-   StrideStyle Shoe E-Commerce - Shared Design System & Core Styles
-   File: style.css
-   Applies to every client page and shared tokens with admin
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   B1. CSS Custom Properties (:root)
-   -------------------------------------------------------------------------- */
 :root {
-  /* Colours */
   --color-bg-dark: #161616;              /* header, hero, footer, admin sidebar */
   --color-bg-light: #F7F7F7;             /* light sections behind cards */
   --color-white: #FFFFFF;
@@ -20,7 +10,6 @@
   --color-primary-hover: #DB7131;
   --color-border: #D9D9D9;
 
-  /* Pastel product-tile backgrounds (from reference product cards) */
   --tile-gray: #BDBDBD;
   --tile-gray-dark: #808080;
   --tile-gray-mid: #8A8A8A;
@@ -33,12 +22,10 @@
   --tile-sky: #A5BEFF;
   --tile-tan: #E6B8A0;
 
-  /* Fonts */
   --font-heading: "Prata", "Playfair Display", Georgia, serif;
   --font-product: "Lora", "Noto Sans", Georgia, serif;
   --font-body: "Poppins", "Noto Sans", Arial, sans-serif;
 
-  /* Type scale (fluid) */
   --fs-hero: clamp(2.75rem, 6.5vw, 5.75rem); /* hero H1 */
   --fs-h2: clamp(2rem, 3.6vw, 3.25rem);       /* section headings */
   --fs-h3: clamp(1.25rem, 1.8vw, 1.6rem);
@@ -47,7 +34,6 @@
   --fs-small: 0.875rem;                       /* 14px */
   --fs-tiny: 0.75rem;                         /* 12px */
 
-  /* Spacing, radii, shadows, layout */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -67,9 +53,6 @@
   --gutter: clamp(1.25rem, 5.3vw, 4.75rem);
 }
 
-/* --------------------------------------------------------------------------
-   Reset & Base Elements
-   -------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -123,15 +106,11 @@ ol {
   list-style: none;
 }
 
-/* Accessible focus styling */
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
 
-/* --------------------------------------------------------------------------
-   Layout Containers & Utilities
-   -------------------------------------------------------------------------- */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -172,10 +151,6 @@ ol {
   border: 0;
 }
 
-/* --------------------------------------------------------------------------
-   B3. Buttons, Links & Inputs
-   -------------------------------------------------------------------------- */
-/* Primary Pill Button */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -217,7 +192,6 @@ ol {
   background-color: var(--color-primary-hover);
 }
 
-/* Outline Pill Button (Add to Cart / Buy Now / Secondary) */
 .btn--outline {
   background-color: transparent;
   color: var(--color-text);
@@ -236,7 +210,6 @@ ol {
   border-color: var(--color-primary);
 }
 
-/* Ghost Pill on Dark (Promo banner Shop Now) */
 .btn--ghost {
   background-color: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.85);
@@ -268,7 +241,6 @@ ol {
   color: var(--color-white);
 }
 
-/* Text link with arrow */
 .link-arrow {
   color: var(--color-primary);
   font-family: var(--font-body);
@@ -294,7 +266,6 @@ ol {
   transform: translateX(3px);
 }
 
-/* Circular Arrow Buttons (Slider pair) */
 .slider-arrows {
   display: inline-flex;
   align-items: center;
@@ -335,7 +306,6 @@ ol {
   transform: scale(1.05);
 }
 
-/* Form Controls */
 .form-group {
   margin-bottom: 1.25rem;
 }
@@ -383,9 +353,10 @@ ol {
   margin-top: 0.375rem;
 }
 
-/* --------------------------------------------------------------------------
-   Product Card Component (Shared)
-   -------------------------------------------------------------------------- */
+.form-input.is-invalid {
+  border-color: #D32F2F;
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -422,7 +393,6 @@ ol {
   line-height: 1.2;
 }
 
-/* Pastel backgrounds */
 .tile-gray       { background-color: var(--tile-gray); }
 .tile-gray-dark  { background-color: var(--tile-gray-dark); }
 .tile-gray-mid   { background-color: var(--tile-gray-mid); }
@@ -435,7 +405,6 @@ ol {
 .tile-sky        { background-color: var(--tile-sky); }
 .tile-tan        { background-color: var(--tile-tan); }
 
-/* Real photo image */
 .product-card__img {
   width: 100%;
   height: 100%;
@@ -443,7 +412,6 @@ ol {
   transition: transform 0.4s ease;
 }
 
-/* Cutout image with multiply */
 .product-card__img--cutout {
   width: 100%;
   height: 100%;
@@ -498,9 +466,6 @@ ol {
   margin-top: auto;
 }
 
-/* --------------------------------------------------------------------------
-   Section Heading Row Component
-   -------------------------------------------------------------------------- */
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -516,10 +481,6 @@ ol {
   line-height: 1.15;
 }
 
-/* --------------------------------------------------------------------------
-   B5. Site Header Component (Dark)
-   -------------------------------------------------------------------------- */
-/* Checkbox hack for mobile menu */
 .nav-toggle {
   display: none;
 }
@@ -624,7 +585,6 @@ ol {
   border: 1.5px solid var(--color-primary);
 }
 
-/* Mobile hamburger trigger */
 .nav-toggle-label {
   display: none;
   width: 44px;
@@ -635,9 +595,6 @@ ol {
   color: var(--color-white);
 }
 
-/* --------------------------------------------------------------------------
-   Inner Page Title Band (shop, product, cart, checkout, login, signup)
-   -------------------------------------------------------------------------- */
 .page-title-band {
   background-color: var(--color-bg-dark);
   padding: 3rem 0 4.25rem;
@@ -698,10 +655,6 @@ ol {
   max-width: 580px;
 }
 
-/* --------------------------------------------------------------------------
-   Newsletter Card (index, shop, product, cart)
-   Straddles the light section above and dark footer below
-   -------------------------------------------------------------------------- */
 .newsletter-wrapper {
   position: relative;
   z-index: 20;
@@ -785,9 +738,6 @@ ol {
   transform: translateY(-1px);
 }
 
-/* --------------------------------------------------------------------------
-   Site Footer (Dark)
-   -------------------------------------------------------------------------- */
 .site-footer {
   background-color: var(--color-bg-dark);
   color: var(--color-white);
@@ -905,13 +855,6 @@ ol {
   color: var(--color-white);
 }
 
-/* ==========================================================================
-   Homepage Specific Sections (index.html)
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   D1. Hero Section (Dark)
-   -------------------------------------------------------------------------- */
 .hero {
   background-color: var(--color-bg-dark);
   padding-top: 3rem;
@@ -1021,9 +964,6 @@ ol {
   transform: scale(1.02);
 }
 
-/* --------------------------------------------------------------------------
-   D2. Featured Pill Strip
-   -------------------------------------------------------------------------- */
 .featured-strip-wrapper {
   position: relative;
   z-index: 25;
@@ -1101,9 +1041,6 @@ ol {
   background-color: var(--color-primary-hover);
 }
 
-/* --------------------------------------------------------------------------
-   D3. See Our New Collection Showcase (CSS Grid 12 cols)
-   -------------------------------------------------------------------------- */
 .collections-section {
   background-color: var(--color-bg-light);
   padding-top: var(--space-6);
@@ -1118,7 +1055,6 @@ ol {
   align-items: start;
 }
 
-/* Left tall card (columns 1 to 3) */
 .collection-tall-col {
   grid-column: 1 / span 3;
   display: flex;
@@ -1194,7 +1130,6 @@ ol {
   max-width: 180px;
 }
 
-/* Center group (columns 4 to 8) */
 .collection-center-col {
   grid-column: 4 / span 5;
   display: flex;
@@ -1235,7 +1170,6 @@ ol {
   transform: scale(1.05);
 }
 
-/* Bottom row under center/right */
 .collection-bottom-row {
   grid-column: 4 / -1;
   display: flex;
@@ -1245,7 +1179,6 @@ ol {
   margin-top: 0.5rem;
 }
 
-/* Right blue card (columns 9 to 12) */
 .collection-right-col {
   grid-column: 9 / span 4;
   display: flex;
@@ -1275,7 +1208,6 @@ ol {
   transform: scale(1.05);
 }
 
-/* Small orange card (far right bottom) */
 .collection-small-tile {
   width: 130px;
   height: 130px;
@@ -1296,9 +1228,6 @@ ol {
   transform: scale(1.06);
 }
 
-/* --------------------------------------------------------------------------
-   D4. Pre Spring Collection (White background)
-   -------------------------------------------------------------------------- */
 .prespring-section {
   background-color: var(--color-white);
   padding-top: var(--space-6);
@@ -1377,9 +1306,6 @@ ol {
   transform: scale(1.03);
 }
 
-/* --------------------------------------------------------------------------
-   D5. "Our Product" Grid (Light Grey Background)
-   -------------------------------------------------------------------------- */
 .products-section {
   background-color: var(--color-bg-light);
   padding-top: var(--space-6);
@@ -1411,9 +1337,6 @@ ol {
   scroll-snap-align: start;
 }
 
-/* --------------------------------------------------------------------------
-   Trust Strip
-   -------------------------------------------------------------------------- */
 .trust-strip {
   background-color: var(--color-white);
   border-top: 1px solid var(--color-border);
@@ -1449,9 +1372,6 @@ ol {
   line-height: 1.3;
 }
 
-/* --------------------------------------------------------------------------
-   D6. Promotional Banner (Full-Bleed)
-   -------------------------------------------------------------------------- */
 .promo-banner-section {
   padding-top: var(--space-6);
   padding-bottom: var(--space-6);
@@ -1529,9 +1449,6 @@ ol {
   }
 }
 
-/* --------------------------------------------------------------------------
-   Quantity Stepper Controls (Shared across Product and Cart)
-   -------------------------------------------------------------------------- */
 .qty-btn {
   width: 36px;
   height: 36px;
@@ -1567,9 +1484,6 @@ ol {
   margin: 0;
 }
 
-/* --------------------------------------------------------------------------
-   Video Modal (Hidden by default, opened via JS)
-   -------------------------------------------------------------------------- */
 .video-modal[hidden] {
   display: none !important;
 }
@@ -1671,5 +1585,4 @@ ol {
   text-decoration: underline;
   white-space: nowrap;
 }
-
 

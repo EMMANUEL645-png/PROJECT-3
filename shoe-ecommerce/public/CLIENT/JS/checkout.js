@@ -4,7 +4,6 @@ import { getProductById } from './products.js';
 const EXPRESS_FEE = 8000;
 const form = document.getElementById('checkout-form');
 
-// empty cart: nothing to check out, go back to the cart page
 if (getCart().length === 0) {
   window.location.href = 'cart.html';
 }
@@ -24,7 +23,6 @@ function getDeliveryFee(subtotal) {
   return subtotal >= FREE_DELIVERY_ABOVE ? 0 : DELIVERY_FEE;
 }
 
-// fill the Order Summary box
 function showSummary() {
   const cart = getCart();
   const subtotal = getSubtotal();
@@ -48,12 +46,10 @@ function showSummary() {
   }
 }
 
-// update the totals when the delivery method changes
 form.addEventListener('change', function (e) {
   if (e.target.name === 'delivery') showSummary();
 });
 
-// place the order
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -63,7 +59,6 @@ form.addEventListener('submit', function (e) {
     return;
   }
 
-  // take a copy of the items with their name and price
   const items = [];
   for (let i = 0; i < cart.length; i++) {
     const product = getProductById(cart[i].id);
@@ -101,14 +96,12 @@ form.addEventListener('submit', function (e) {
     total: subtotal + delivery
   };
 
-  // save the order (later this will go to Firebase)
   const orders = JSON.parse(localStorage.getItem('orders')) || [];
   orders.push(order);
   localStorage.setItem('orders', JSON.stringify(orders));
 
   clearCart();
 
-  // show the thank-you message instead of the form
   document.querySelector('.checkout-layout').hidden = true;
   document.getElementById('order-success-number').textContent = order.id;
   document.getElementById('order-success-total').textContent = formatNaira(order.total);
@@ -118,3 +111,4 @@ form.addEventListener('submit', function (e) {
 });
 
 showSummary();
+
